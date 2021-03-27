@@ -1,0 +1,18 @@
+@use './typography' as*;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Nunito';
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
