@@ -23,3 +23,37 @@
 @mixin bold {
     font-weight: 700;
 }
+
+@mixin mob-h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+@mixin mob-h2 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+@mixin mob-h3 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+@mixin mob-p1 {
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+}
+
+@mixin mob-p2 {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+}
+
+@mixin flex-row {
+    display: flex;
+}
+
+@mixin flex-column {
+    @include flex-row;
+    flex-direction: column;
+}

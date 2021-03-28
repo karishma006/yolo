@@ -39,14 +39,14 @@
     },
     {
         "id": "2",
-        "title": "Run a marathon",
+        "title": "Learn to play chess",
         "image": "some link",
-        "category": "fitness",
-        "rating": 4.0,
-        "bucketed": "66%",
-        "completed": "72%",
-        "description": "A marathon is 26.2 miles or 42 kilometers. Races that are shorter or longer in distance have different names (such as 5K, 10K). Before you attempt to run a marathon, it's a good idea to be running for at least 6 months and run at least 3 times a week.",
-        "know more": "https://www.realbuzz.com/articles-interests/running/article/7-reasons-to-run-a-marathon",
+        "category": "intelligence",
+        "rating": 4.5,
+        "bucketed": "89%",
+        "completed": "76%",
+        "description": "Chess improves the logical part of the brain. Every time you learn a new move, a new neuron is developed in your brain, which increases the size and capability of your brain's neural network thus making your brain fast.",
+        "know more": "https://www.healthline.com/health/benefits-of-playing-chess",
         "status": "to do",
         "reviews": [
             {
@@ -153,14 +153,14 @@
     },
     {
         "id": "5",
-        "title": "Learn to play chess",
+        "title": "Run a marathon",
         "image": "some link",
-        "category": "intelligence",
-        "rating": 4.5,
-        "bucketed": "89%",
-        "completed": "76%",
-        "description": "Chess improves the logical part of the brain. Every time you learn a new move, a new neuron is developed in your brain, which increases the size and capability of your brain's neural network thus making your brain fast.",
-        "know more": "https://www.healthline.com/health/benefits-of-playing-chess",
+        "category": "fitness",
+        "rating": 4.0,
+        "bucketed": "66%",
+        "completed": "72%",
+        "description": "A marathon is 26.2 miles or 42 kilometers. Races that are shorter or longer in distance have different names (such as 5K, 10K). Before you attempt to run a marathon, it's a good idea to be running for at least 6 months and run at least 3 times a week.",
+        "know more": "https://www.realbuzz.com/articles-interests/running/article/7-reasons-to-run-a-marathon",
         "status": "to do",
         "reviews": [
             {
