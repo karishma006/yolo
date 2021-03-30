@@ -13,6 +13,7 @@ router.get('/', (_request, response) => {
     const displayedActivities = activities.map(activity => {
         return {
             id: activity.id,
+            category: activity.category,
             title: activity.title,
             image: activity.image,
             rating: activity.rating,
