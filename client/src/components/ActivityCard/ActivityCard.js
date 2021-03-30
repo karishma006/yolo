@@ -1,13 +1,18 @@
 import './ActivityCard.scss';
 
-function ActivityCard() {
+function ActivityCard({ activity }) {
+    const { image, title, rating, bucketed, completed } = activity;
     return (
-        <article className='activity-card'>
-            <img className='activity-card__image' src='http://placekitten.com/142/142' alt='title'/>
-            <div className='activity-card__right'>
-                <h3 className='activity-card__title'>Go skydiving</h3>
-                <p className='activity-card__stats'>60% have bucketed this</p>
-                <p className='activity-card__stats'>80% have completed this</p>
+        <article className='activity-nav__card'>
+            <img className='activity-nav__card__image' src={image} alt={title}/>
+            <div className='activity-nav__card__right'>
+                <p className='activity-nav__card__title'>{title}</p>
+                <div className='activity-nav__card__wrapper'>
+                    <p className='activity-nav__card__stats'>{bucketed}</p><p className='activity-nav__card__stats activity-nav__card__stats--text'>have bucketed this</p>
+                </div>
+                <div className='activity-nav__card__wrapper'>
+                    <p className='activity-nav__card__stats'>{completed}</p><p className='activity-nav__card__stats activity-nav__card__stats--text'>have bucketed this</p>
+                </div>
             </div>
         </article>
     );

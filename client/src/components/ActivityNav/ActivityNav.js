@@ -11,7 +11,7 @@ function ActivityNav({ activities }) {
                         <ActivityCard
                         activity={activity}/>
                     </Link>
-                ))};
+                ))}
             </nav>
         </section>
     );

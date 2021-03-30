@@ -2,50 +2,64 @@
 @use '../../partials/mixins' as *;
 @use '../../partials/variables' as *;
 
-.activity-card {
+.activity-nav {
+    &__card {
     width: 100%;
     height: 8.875rem;
     margin-bottom: $mob-margin-y-4;
     @include rounded;
     @include flex-row;
 
-    &__image {
-        @include rounded;
-    }
+        &__image {
+            border-radius: 0.25rem;
+            width: 8.625rem;
+            height: 8.625rem;
+            object-fit: cover;
+            z-index: -1;
+        }
 
-    &__right {
-        @include flex-column;
-        padding: $mob-margin-y-4 0 $mob-margin-y-4 $mob-margin-x;
-        @include mob-h3;
-    }
+        &__right {
+            @include flex-column;
+            padding: $mob-margin-y-4 0 $mob-margin-y-4 $mob-margin-x;
+            @include mob-h3;
+        }
 
-    &__title {
-        @include bold;
-        margin-bottom: $mob-margin-y-3;
-    }
+        &__title {
+            @include bold;
+            margin-bottom: $mob-margin-y-3;
+        }
 
-    &__stats {
-        @include regular;
-        margin-bottom: $mob-margin-y-3;
-    }
+        &__wrapper {
+            @include flex-row;
+            margin-bottom: $mob-margin-y-3;
+        }
 
-    &--category-1 {
-        border: 0.125rem solid $category-color-1;
-    }
+        &__stats {
+            @include bold;
+            &--text {
+                @include regular;
+                padding-left: $mob-margin-x/4;
+            }
+        }
 
-    &--category-2 {
-        border: 0.125rem solid $category-color-2;
-    }
+        &--category-1 {
+            border: 0.125rem solid $category-color-1;
+        }
 
-    &--category-3 {
-        border: 0.125rem solid $category-color-3;
-    }
+        &--category-2 {
+            border: 0.125rem solid $category-color-2;
+        }
 
-    &--category-4 {
-        border: 0.125rem solid $category-color-4;
-    }
+        &--category-3 {
+            border: 0.125rem solid $category-color-3;
+        }
 
-    &--category-5 {
-        border: 0.125rem solid $category-color-5;
+        &--category-4 {
+            border: 0.125rem solid $category-color-4;
+        }
+
+        &--category-5 {
+            border: 0.125rem solid $category-color-5;
+        }
     }
 }
