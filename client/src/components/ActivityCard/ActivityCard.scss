@@ -5,6 +5,7 @@
 .activity-card {
     width: 100%;
     height: 8.875rem;
+    margin-bottom: $mob-margin-y-4;
     @include rounded;
     @include flex-row;
 

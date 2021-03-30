@@ -1,6 +1,6 @@
 import './ActivityCard.scss';
 
-function ActivityCard () {
+function ActivityCard() {
     return (
         <article className='activity-card'>
             <img className='activity-card__image' src='http://placekitten.com/142/142' alt='title'/>

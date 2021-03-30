@@ -229,8 +229,8 @@
     },
     {
         "id": "7",
-        "title": "http://localhost:8080/public/activity-7.jpg",
-        "image": "some link",
+        "title": "Play a musical instrument",
+        "image": "http://localhost:8080/public/activity-7.jpg",
         "category": "creativity",
         "rating": 4.0,
         "bucketed": "76%",
@@ -343,7 +343,7 @@
     },
     {
         "id": "10",
-        "title": "Participate in a puzzle tournament",
+        "title": "Win a puzzle tournament",
         "image": "http://localhost:8080/public/activity-10.jpg",
         "category": "intelligence",
         "rating": 3.0,
