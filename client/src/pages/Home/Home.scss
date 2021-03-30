@@ -1,0 +1,7 @@
+@use '../../partials/resets' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+.main {
+    padding: 0 $mob-margin-x;
+}

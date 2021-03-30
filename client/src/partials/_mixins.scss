@@ -58,3 +58,7 @@
     @include flex-row;
     flex-direction: column;
 }
+
+@mixin rounded {
+    border-radius: 0.5rem;
+}
