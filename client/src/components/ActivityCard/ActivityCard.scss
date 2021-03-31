@@ -10,12 +10,15 @@
     @include rounded;
     @include flex-row;
 
+    &:hover {
+        color: $primary-color-2;
+    }
+
         &__image {
-            border-radius: 0.25rem;
+            border-radius: 0.35rem;
             width: 8.625rem;
             height: 8.625rem;
             object-fit: cover;
-            z-index: -1;
         }
 
         &__right {
@@ -44,22 +47,42 @@
 
         &--category-1 {
             border: 0.125rem solid $category-color-1;
+
+            &:hover {
+                background-color: $category-color-1;
+            }
         }
 
         &--category-2 {
             border: 0.125rem solid $category-color-2;
+
+            &:hover {
+                background-color: $category-color-2;
+            }
         }
 
         &--category-3 {
             border: 0.125rem solid $category-color-3;
+
+            &:hover {
+                background-color: $category-color-3;
+            }
         }
 
         &--category-4 {
             border: 0.125rem solid $category-color-4;
+
+            &:hover {
+                background-color: $category-color-4;
+            }
         }
 
         &--category-5 {
             border: 0.125rem solid $category-color-5;
+
+            &:hover {
+                background-color: $category-color-5;
+            }
         }
     }
 }
