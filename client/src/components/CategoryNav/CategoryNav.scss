@@ -2,12 +2,14 @@
 @use '../../partials/mixins' as *;
 @use '../../partials/variables' as *;
 
-.main {
-    padding: 0 $mob-margin-x;
-}
-
 .categories {
     &__list {
+        @include flex-row;
+        padding: 0;
+        margin: $mob-margin-y-5 0;
+    }
+    
+    &__item {
         list-style-type: none;
     }
 }

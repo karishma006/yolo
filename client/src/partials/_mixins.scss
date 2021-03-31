@@ -50,6 +50,11 @@
     line-height: 1.125rem;
 }
 
+@mixin mob-p3 {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+
 @mixin flex-row {
     display: flex;
 }
@@ -59,6 +64,46 @@
     flex-direction: column;
 }
 
-@mixin rounded {
+@mixin rounded-corners {
     border-radius: 0.5rem;
+}
+
+@mixin border-category-1 {
+    border: $border-1 solid $category-color-1;
+}
+
+@mixin border-category-2 {
+    border: $border-1 solid $category-color-2;
+}
+
+@mixin border-category-3 {
+    border: $border-1 solid $category-color-3;
+}
+
+@mixin border-category-4 {
+    border: $border-1 solid $category-color-4;
+}
+
+@mixin border-category-5 {
+    border: $border-1 solid $category-color-5;
+}
+
+@mixin background-category-1 {
+    background-color: $category-color-1;
+}
+
+@mixin background-category-2 {
+    background-color: $category-color-2;
+}
+
+@mixin background-category-3 {
+    background-color: $category-color-3;
+}
+
+@mixin background-category-4 {
+    background-color: $category-color-4;
+}
+
+@mixin background-category-5 {
+    background-color: $category-color-5;
 }

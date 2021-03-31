@@ -2,6 +2,7 @@ import './Home.scss';
 import { Component } from 'react';
 import axios from 'axios';
 import { API_URL } from '../../utils';
+import CategoryNav from '../../components/CategoryNav/CategoryNav';
 import ActivityNav from '../../components/ActivityNav/ActivityNav';
 
 class Home extends Component {
@@ -26,8 +27,18 @@ class Home extends Component {
 
         const { activities } = this.state;
 
+        const uniqueCategories = [...new Set (activities.map(activity => activity.category))];
+
         return (
         <main className='main'>
+            <CategoryNav
+            categories={uniqueCategories}/>
+                {/* {uniqueCategories.map((category, i) => (
+                    <li key={i} className='categories__list'>
+                        <CategoryLabel
+                        category={category}/>
+                    </li>
+                ))} */}
             <ActivityNav
             activities={activities}/>
         </main>

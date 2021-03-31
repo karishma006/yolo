@@ -1,0 +1,54 @@
+@use '../../partials/resets' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+.categories {
+    &__card {
+        @include flex-column;
+        align-items: center;
+    }
+
+    &__circle {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        @include flex-row;
+        justify-content: center;
+        align-items: center;
+
+        &--category-1 {
+            @include background-category-1;
+            margin: 0 0.6875rem 0 0.5rem;
+        }
+
+        &--category-2 {
+            @include background-category-2;
+            margin: 0 0.6875rem;
+        }
+
+        &--category-3 {
+            @include background-category-3;
+            margin: 0 0.6875rem;
+        }
+
+        &--category-4 {
+            @include background-category-4;
+            margin: 0 0.6875rem;
+        }
+
+        &--category-5 {
+            @include background-category-5;
+            margin: 0 0.5rem 0 0.6875rem;
+        }
+    }
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    &__title {
+        @include mob-p3;
+        margin-top: $mob-margin-y-3;
+    }
+}

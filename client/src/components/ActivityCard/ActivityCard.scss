@@ -7,7 +7,7 @@
     width: 100%;
     height: 8.875rem;
     margin-bottom: $mob-margin-y-4;
-    @include rounded;
+    @include rounded-corners;
     @include flex-row;
 
     &:hover {
@@ -46,42 +46,42 @@
         }
 
         &--category-1 {
-            border: 0.125rem solid $category-color-1;
+            @include border-category-1;
 
             &:hover {
-                background-color: $category-color-1;
+                @include background-category-1;
             }
         }
 
         &--category-2 {
-            border: 0.125rem solid $category-color-2;
+            @include border-category-2;
 
             &:hover {
-                background-color: $category-color-2;
+                @include background-category-2;
             }
         }
 
         &--category-3 {
-            border: 0.125rem solid $category-color-3;
+            @include border-category-3;
 
             &:hover {
-                background-color: $category-color-3;
+                @include background-category-3;
             }
         }
 
         &--category-4 {
-            border: 0.125rem solid $category-color-4;
+            @include border-category-4;
 
             &:hover {
-                background-color: $category-color-4;
+                @include background-category-4;
             }
         }
 
         &--category-5 {
-            border: 0.125rem solid $category-color-5;
+            @include border-category-5;
 
             &:hover {
-                background-color: $category-color-5;
+                @include background-category-5;
             }
         }
     }
