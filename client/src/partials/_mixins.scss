@@ -68,6 +68,10 @@
     border-radius: 0.5rem;
 }
 
+@mixin rounded {
+    border-radius: 50%;
+}
+
 @mixin border-category-1 {
     border: $border-1 solid $category-color-1;
 }

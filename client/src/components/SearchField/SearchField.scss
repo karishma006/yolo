@@ -1,0 +1,27 @@
+@use '../../partials/resets' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+.search {
+    width: 100%;
+    height: 2.25rem;
+    border-radius: 1.125rem;
+    outline: none;
+    border: 0;
+    background-color: $primary-color-3;
+    background-image: url('../../assets/icons/search.svg');
+    background-repeat: no-repeat;
+    background-position: center left 1rem;
+    padding-left: 2.75rem;
+
+    &:focus {
+        border: 0.0625rem solid $accent-color;
+        color: $primary-color-1;
+    }
+
+    &::placeholder {
+        color: $primary-color-4;
+        @include mob-p2;
+        @include regular;
+    }
+}
