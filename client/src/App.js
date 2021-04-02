@@ -7,7 +7,7 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route path='/' exact component={HomePage}/>
-        <Route path='/activities' component={ActivityDetailsPage}/>
+        <Route path='/activities/:activityId' component={ActivityDetailsPage}/>
       </Switch>
     </BrowserRouter>
   );

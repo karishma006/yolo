@@ -1,3 +1,82 @@
 @use '../../partials/resets' as *;
 @use '../../partials/mixins' as *;
 @use '../../partials/variables' as *;
+
+.activity {
+    padding: 0 $mob-margin-x;
+    height: 100vh;
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+
+    &--category-1 {
+        @include background-category-1;
+    }
+
+    &--category-2 {
+        @include background-category-2;
+    }
+
+    &--category-3 {
+        @include background-category-3;
+    }
+
+    &--category-4 {
+        @include background-category-4;
+    }
+
+    &--category-5 {
+        @include background-category-5;
+    }
+
+    &__back-icon {
+        align-self: flex-start;
+        margin-bottom: auto;
+        margin-top: 3.5rem;
+        margin-left: $mob-margin-x/2;
+    }
+
+    &__card {
+        width: 100%;
+        height: calc(100vw - 8.5332vw);
+        @include rounded-corners;
+        background-color: $primary-color-2;
+        @include flex-column;
+        align-items: center;
+        justify-content: center;
+        padding: 2.25rem $mob-margin-y-5;
+        color: $primary-color-1;
+        margin-bottom: auto;
+
+        &__title {
+            @include mob-h1;
+            @include bold;
+        }
+
+        &__description {
+            @include mob-p2;
+            @include regular;
+            margin-top: $mob-margin-y-5;
+        }
+
+        &__link {
+            text-decoration: none;
+            color: $primary-color-1;
+            @include mob-p2;
+            @include bold;
+            margin-top: 2.1875rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__wrapper {
+        @include flex-column;
+        align-items: center;
+        margin-bottom: $mob-margin-y-5;
+    }
+
+    &__text {
+        color: $primary-color-2;
+        margin-bottom: $mob-margin-y-4;
+    }
+}
