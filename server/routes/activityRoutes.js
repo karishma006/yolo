@@ -24,4 +24,10 @@ router.get('/', (_request, response) => {
     response.status(200).json(displayedActivities);
 });
 
+router.get('/activities/:activityId', (request, response) => {
+    const activities = readActivities();
+    const activity = activities.find(activity => activity.id === request.params.activityId);
+    response.status(200).json(activity);
+});
+
 module.exports = router;

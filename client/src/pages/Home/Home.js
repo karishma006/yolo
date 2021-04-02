@@ -2,6 +2,7 @@ import './Home.scss';
 import { Component } from 'react';
 import axios from 'axios';
 import { API_URL } from '../../utils';
+import Header from '../../components/Header/Header';
 import SearchField from '../../components/SearchField/SearchField';
 import CategoryNav from '../../components/CategoryNav/CategoryNav';
 import ActivityNav from '../../components/ActivityNav/ActivityNav';
@@ -42,15 +43,18 @@ class Home extends Component {
         });
 
         return (
-        <main className='main'>
-            <SearchField/>
-            <CategoryNav
-            categories={uniqueCategories}/>
-            <ActivityNav
-            activities={activities}
-            activitiesOnChange={this.activitiesOnChange}
-            searchValue={this.state.searchValue}/>
-        </main>
+            <>
+            <Header/>
+            <main className='main'>
+                <SearchField/>
+                <CategoryNav
+                categories={uniqueCategories}/>
+                <ActivityNav
+                activities={activities}
+                activitiesOnChange={this.activitiesOnChange}
+                searchValue={this.state.searchValue}/>
+            </main>
+            </>
         );
     };
 };

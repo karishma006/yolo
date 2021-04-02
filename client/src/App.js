@@ -1,13 +1,13 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Header from './components/Header/Header';
 import HomePage from './pages/Home/Home';
+import ActivityDetailsPage from './pages/ActivityDetails/ActivityDetails';
 
 function App() {
   return (
     <BrowserRouter>
-      <Header/>
       <Switch>
         <Route path='/' exact component={HomePage}/>
+        <Route path='/activities' component={ActivityDetailsPage}/>
       </Switch>
     </BrowserRouter>
   );
