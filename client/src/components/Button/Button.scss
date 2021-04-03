@@ -2,7 +2,7 @@
 @use '../../partials/mixins' as *;
 @use '../../partials/variables' as *;
 
-.activity__card__button {
+.activity__card__button, .reviews__button {
     width: 100%;
     background-color: $accent-color;
     padding: $mob-margin-y-3 $mob-margin-y-4;
@@ -16,4 +16,13 @@
     &:hover {
         background-color: $primary-color-1;
     }
+}
+
+.review-card__button {
+    @extend .activity__card__button;
+    width: auto;
+    background-color: $primary-color-2;
+    color: $primary-color-1;
+    border: 0.0625rem solid $primary-color-1;
+    margin-left: auto;
 }

@@ -9,7 +9,8 @@ function ActivityNav({ activities }) {
                 {activities.map(activity => (
                     <Link 
                     key={activity.id} 
-                    to={{pathname: `/activities/${activity.id}`, activity: {activity}}} className='activity-nav__link'>
+                    to={`/activities/${activity.id}`} 
+                    className='activity-nav__link'>
                         <ActivityCard
                         activity={activity}/>
                     </Link>

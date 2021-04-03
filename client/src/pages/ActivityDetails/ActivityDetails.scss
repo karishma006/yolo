@@ -3,36 +3,35 @@
 @use '../../partials/variables' as *;
 
 .activity {
-    padding: 0 $mob-margin-x;
+    padding: 3.5rem $mob-margin-x;
     height: 100vh;
     @include flex-column;
     justify-content: center;
     align-items: center;
 
-    &--category-1 {
+    &--category-intelligence {
         @include background-category-1;
     }
 
-    &--category-2 {
+    &--category-fitness {
         @include background-category-2;
     }
 
-    &--category-3 {
+    &--category-fun {
         @include background-category-3;
     }
 
-    &--category-4 {
+    &--category-adventure {
         @include background-category-4;
     }
 
-    &--category-5 {
+    &--category-creativity {
         @include background-category-5;
     }
 
     &__back-icon {
         align-self: flex-start;
         margin-bottom: auto;
-        margin-top: 3.5rem;
         margin-left: $mob-margin-x/2;
     }
 
@@ -72,7 +71,6 @@
     &__wrapper {
         @include flex-column;
         align-items: center;
-        margin-bottom: $mob-margin-y-5;
     }
 
     &__text {

@@ -1,0 +1,56 @@
+@use '../../partials/resets' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+.reviews {
+    padding: 3.5rem $mob-margin-x 0 $mob-margin-x;
+    height: auto;
+    @include flex-column;
+    align-items: center;
+
+    &--category-intelligence {
+        @include background-category-1;
+    }
+
+    &--category-fitness {
+        @include background-category-2;
+    }
+
+    &--category-fun {
+        @include background-category-3;
+    }
+
+    &--category-adventure {
+        @include background-category-4;
+    }
+
+    &--category-creativity {
+        @include background-category-5;
+    }
+
+    &__header {
+        @include flex-row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $mob-margin-y-5;
+    }
+
+    &__back-icon {
+        margin-left: $mob-margin-x/2;
+        margin-right: auto;
+    }
+
+    &__title {
+        color: $primary-color-2;
+        @include mob-h1;
+    }
+
+    &__card {
+        width: 100%;
+        padding: $mob-margin-y-5 $mob-margin-x;
+        border-radius: 0.5rem 0.5rem 0 0;
+        background-color: $primary-color-2;
+        margin-bottom: auto;
+        margin-top: $mob-margin-y-5;
+    }
+}
