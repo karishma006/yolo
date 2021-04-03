@@ -50,5 +50,6 @@
     &__title {
         @include mob-p3;
         margin-top: $mob-margin-y-3;
+        text-transform: capitalize;
     }
 }

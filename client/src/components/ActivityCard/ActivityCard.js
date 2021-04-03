@@ -4,7 +4,7 @@ function ActivityCard({ activity }) {
     const { category, image, title, rating, bucketed, completed } = activity;
 
     return (
-        <article className={category==='intelligence' ? 'activity-nav__card activity-nav__card--category-1' : category==='fitness' ? 'activity-nav__card activity-nav__card--category-2' : category==='fun' ? 'activity-nav__card activity-nav__card--category-3' : category==='adventure' ? 'activity-nav__card activity-nav__card--category-4' : category==='creativity' ? 'activity-nav__card activity-nav__card--category-5' : 'activity-nav__card'}>   
+        <article className={`activity-nav__card activity-nav__card--category-${category}`}>   
             <img className='activity-nav__card__image' src={image} alt={title}/>
             <div className='activity-nav__card__right'>
                 <p className='activity-nav__card__title'>{title}</p>
