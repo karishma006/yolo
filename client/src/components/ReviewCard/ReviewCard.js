@@ -15,18 +15,18 @@ const ReviewCard = ({ review }) => {
     const { name, userImage, timestamp, content, thumbs } = review;
 
     return (
-        <article className='review-card'>
-            <img className='review-card__image' src={userImage} alt='user image'/>
-            <div className='review-card__wrapper'>
-                <div className='review-card__header'>
-                    <p className='review-card__name'>{name}</p>
-                    <p className='review-card__date'>{convertTimestamp(timestamp)}</p>
+        <article className='review__card'>
+            <img className='review__card__image' src={userImage} alt='user image'/>
+            <div className='review__card__wrapper'>
+                <div className='review__card__header'>
+                    <p className='review__card__name'>{name}</p>
+                    <p className='review__card__date'>{convertTimestamp(timestamp)}</p>
                 </div>
-                <p className='review-card__content'>{content}</p>
-                <p className='review-card__thumbs'>{thumbs} people found this helpful</p>
-                <div className='review-card__footer'>
+                <p className='review__card__content'>{content}</p>
+                <p className='review__card__thumbs'>{thumbs} people found this helpful</p>
+                <div className='review__card__footer'>
                     <Button
-                    className='review-card__button'
+                    className='review__card__button'
                     text='Helpful'/>
                 </div>
             </div>

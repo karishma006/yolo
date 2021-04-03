@@ -2,50 +2,52 @@
 @use '../../partials/mixins' as *;
 @use '../../partials/variables' as *;
 
-.review-card {
-    padding: $mob-margin-y-4 0;
-    @include flex-row;
-    justify-content: flex-start;
-    border-bottom: 0.0625rem solid $primary-color-3;
-
-    &__image {
-        width: 3rem;
-        height: 3rem;
-        @include rounded;
-        object-fit: cover;
-    }
-
-    &__wrapper {
-        margin-left: $mob-margin-x;
-        width: calc(100% - 3rem);
-    }
-
-    &__header {
+.review {
+    &__card {
+        padding: $mob-margin-y-4 0;
         @include flex-row;
-        justify-content: space-between;
-    }
+        justify-content: flex-start;
+        border-bottom: 0.0625rem solid $primary-color-3;
 
-    &__name {
-        @include mob-h3;
-        @include bold;
-    }
+        &__image {
+            width: 3rem;
+            height: 3rem;
+            @include rounded;
+            object-fit: cover;
+        }
 
-    &__date {
-        @include mob-h3;
-    }
+        &__wrapper {
+            margin-left: $mob-margin-x;
+            width: calc(100% - 3rem);
+        }
 
-    &__content {
-        @include mob-p2;
-        margin-top: $mob-margin-y-4;
-    }
+        &__header {
+            @include flex-row;
+            justify-content: space-between;
+        }
 
-    &__thumbs {
-        @include mob-p2;
-        @include semi-bold;
-        margin: $mob-margin-y-4 0;
-    }
+        &__name {
+            @include mob-h3;
+            @include bold;
+        }
 
-    &__footer {
-        @include flex-row;
+        &__date {
+            @include mob-h3;
+        }
+
+        &__content {
+            @include mob-p2;
+            margin-top: $mob-margin-y-4;
+        }
+
+        &__thumbs {
+            @include mob-p2;
+            @include semi-bold;
+            margin: $mob-margin-y-4 0;
+        }
+
+        &__footer {
+            @include flex-row;
+        }
     }
 }

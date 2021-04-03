@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 
-function readActivities() {
+const readActivities = () => {
     const videosData = fs.readFileSync('./data/activities.json');
     const parsedData = JSON.parse(videosData);
     return parsedData;

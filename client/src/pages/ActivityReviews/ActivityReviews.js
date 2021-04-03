@@ -26,11 +26,11 @@ const ActivityReviews = (props) => {
                 <img className='reviews__back-icon' src={BackIcon} alt='Back Icon'/>
                 <h3 className='reviews__title'>{title}</h3>
             </div>
-            <Button
-            className='reviews__button'
-            text='+ Add to my bucket'/>
             <article className='reviews__card'>
-                <h3 className='reviews__heading'>Reviews</h3>
+                <Button
+                className='reviews__card__button'
+                text='+ Add to my bucket'/>
+                <h3 className='reviews__card__heading'>Reviews</h3>
                 {reviews && reviews.map(review => 
                     <ReviewCard
                     key={review.id}

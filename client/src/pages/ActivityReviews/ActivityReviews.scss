@@ -50,5 +50,9 @@
         background-color: $primary-color-2;
         margin-bottom: auto;
         margin-top: $mob-margin-y-5;
+
+        &__heading {
+            margin-top: $mob-margin-y-5;
+        }
     }
 }
