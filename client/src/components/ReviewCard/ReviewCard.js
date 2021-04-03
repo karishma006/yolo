@@ -1,7 +1,7 @@
 import './ReviewCard.scss';
 import Button from '../Button/Button';
 
-function ReviewCard({ review }) {
+const ReviewCard = ({ review }) => {
 
     const convertTimestamp = (timestamp) => {
         const newTimestamp = new Date(timestamp);

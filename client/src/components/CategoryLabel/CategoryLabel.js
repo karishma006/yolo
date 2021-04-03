@@ -13,7 +13,7 @@ const icons = {
     'creativity': Creativity,
 };
 
-function CategoryLabel({ category }) {
+const CategoryLabel = ({ category }) => {
     return (
         <article className='categories__card'>
             <div className={`categories__circle categories__circle--category-${category}`}>

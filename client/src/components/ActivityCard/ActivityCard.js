@@ -1,6 +1,6 @@
 import './ActivityCard.scss';
 
-function ActivityCard({ activity }) {
+const ActivityCard = ({ activity }) => {
     const { category, image, title, rating, bucketed, completed } = activity;
 
     return (

@@ -6,7 +6,7 @@ import BackIcon from '../../assets/icons/back.svg';
 import ReviewCard from '../../components/ReviewCard/ReviewCard';
 import Button from '../../components/Button/Button';
 
-function ActivityReviews(props) {
+const ActivityReviews = (props) => {
     const [activity, setActivity] = useState({});
     const { activityId } = props.match.params;
 

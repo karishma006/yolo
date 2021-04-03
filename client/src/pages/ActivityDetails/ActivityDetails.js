@@ -7,7 +7,7 @@ import DownIcon from '../../assets/icons/down.svg';
 import { Link } from 'react-router-dom';
 import Button from '../../components/Button/Button';
 
-function ActivityDetails(props) {
+const ActivityDetails = (props) => {
     const [activity, setActivity] = useState({});
     const { activityId } = props.match.params;
 

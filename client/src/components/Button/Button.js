@@ -1,6 +1,6 @@
 import './Button.scss';
 
-function Button({ className, text }) {
+const Button = ({ className, text }) => {
     return (
         <button className={className}>{text}</button>
     );

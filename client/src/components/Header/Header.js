@@ -1,7 +1,7 @@
 import './Header.scss';
 import { NavLink } from 'react-router-dom';
 
-function Header() {
+const Header = () => {
     return (
         <header className='header'>
             <div className='header__logo'>

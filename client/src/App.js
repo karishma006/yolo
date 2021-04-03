@@ -3,7 +3,7 @@ import HomePage from './pages/Home/Home';
 import ActivityDetailsPage from './pages/ActivityDetails/ActivityDetails';
 import ActivityReviewsPage from './pages/ActivityReviews/ActivityReviews';
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Switch>

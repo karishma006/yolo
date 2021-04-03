@@ -5,8 +5,6 @@
 .reviews {
     padding: 3.5rem $mob-margin-x 0 $mob-margin-x;
     height: auto;
-    @include flex-column;
-    align-items: center;
 
     &--category-intelligence {
         @include background-category-1;
@@ -30,19 +28,19 @@
 
     &__header {
         @include flex-row;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: flex-start;
         margin-bottom: $mob-margin-y-5;
     }
 
     &__back-icon {
-        margin-left: $mob-margin-x/2;
         margin-right: auto;
     }
 
     &__title {
         color: $primary-color-2;
         @include mob-h1;
+        margin-right: auto;
+        padding-right: 1.5rem;
     }
 
     &__card {

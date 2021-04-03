@@ -17,6 +17,7 @@
 
     &__wrapper {
         margin-left: $mob-margin-x;
+        width: calc(100% - 3rem);
     }
 
     &__header {
