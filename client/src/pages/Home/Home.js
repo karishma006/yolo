@@ -14,13 +14,29 @@ class Home extends Component {
         activities : [],
         searchValue: '',
         showAllCategories: true,
-        filteredCategories: { 
+        filteredCategories: {
             intelligence: false,
             creativity: false,
             fun: false,
             adventure: false,
             fitness: false,
         },
+    }
+
+    filterOnClick = (category, event) => {
+        event.preventDefault();
+
+        const filteredCategoriesClone = JSON.parse(JSON.stringify(this.state.filteredCategories));
+        filteredCategoriesClone[category] = !filteredCategoriesClone[category]
+        const newShowAllCategory = !Object.values(filteredCategoriesClone).some(Boolean)
+        const categoriesToFilter = Object.keys(filteredCategoriesClone).filter(key => filteredCategoriesClone[key] === true);
+        const newActivities = newShowAllCategory ? this.state.allActivities : this.filterActivities(categoriesToFilter)
+
+        this.setState({
+            filteredCategories: filteredCategoriesClone,
+            showAllCategories: newShowAllCategory,
+            activities: newActivities
+        });
     };
 
     componentDidMount() {
@@ -34,6 +50,10 @@ class Home extends Component {
         });
     };
 
+    filterActivities = (categories) => this.state.allActivities.filter(activity => {
+        return categories.includes(activity.category.toLowerCase());
+    });
+
     searchActivities = (searchValue) => this.state.allActivities.filter(activity => {
         return activity.title.toLowerCase().includes(searchValue.toLowerCase());
     });
@@ -43,20 +63,6 @@ class Home extends Component {
         this.setState({
             searchValue: event.target.value,
             activities: newActivities,
-        });
-    };
-
-    filterOnClick = (event) => {
-        event.preventDefault();
-        console.log("I'm getting called " + event.target.alt + " " + this.state.filteredCategories[event.target.alt]);
-        
-        const filteredCategoriesClone = JSON.parse(JSON.stringify(this.state.filteredCategories));
-        filteredCategoriesClone[event.target.alt] = !filteredCategoriesClone[event.target.alt] // toggle the categegory clicked
-        const newShowAllCategory = !Object.values(filteredCategoriesClone).some(Boolean); // check if any are true.
-        
-        this.setState({ 
-            filteredCategories: filteredCategoriesClone, 
-            showAllCategories: newShowAllCategory 
         });
     };
 
@@ -76,6 +82,7 @@ class Home extends Component {
                 searchValue={this.state.searchValue}/>
                 <CategoryNav
                 categories={categories}
+                filteredCategories={this.state.filteredCategories}
                 filterOnClick={this.filterOnClick}/>
                 <ActivityNav
                 activities={activities}/>

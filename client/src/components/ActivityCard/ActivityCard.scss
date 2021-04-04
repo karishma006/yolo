@@ -16,13 +16,18 @@
 
         &__right {
             @include flex-column;
-            padding: $mob-margin-y-4 0 $mob-margin-y-4 $mob-margin-x;
+            padding: $mob-margin-y-4 0 $mob-margin-y-3 $mob-margin-x;
             @include mob-h3;
         }
 
         &__title {
             @include bold;
             margin-bottom: $mob-margin-y-3;
+        }
+
+        &__line {
+            @include flex-row;
+            align-items: center;
         }
 
         &__wrapper {
@@ -32,6 +37,7 @@
 
         &__stats {
             @include bold;
+
             &--text {
                 @include regular;
                 padding-left: $mob-margin-x/4;

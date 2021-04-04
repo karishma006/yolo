@@ -27,15 +27,17 @@ const ActivityCard = ({ activity }) => {
             <img className='activity-nav__card__image' src={image} alt={title}/>
             <div className='activity-nav__card__right'>
                 <p className='activity-nav__card__title'>{title}</p>
-                <Rating
-                placeholderRating={rating}
-                emptySymbol={<img src={ratingIcons[category]['empty']}/>}
-                placeholderSymbol={<img src={ratingIcons[category]['full']}/>}/>
+                    <Rating
+                    placeholderRating={rating}
+                    emptySymbol={<img src={ratingIcons[category]['empty']}/>}
+                    placeholderSymbol={<img src={ratingIcons[category]['full']}/>}/>
                 <div className='activity-nav__card__wrapper'>
-                    <p className='activity-nav__card__stats'>{bucketed}</p><p className='activity-nav__card__stats activity-nav__card__stats--text'>have bucketed this</p>
+                    <p className='activity-nav__card__stats'>{bucketed}</p>
+                    <p className='activity-nav__card__stats activity-nav__card__stats--text'>have bucketed this</p>
                 </div>
                 <div className='activity-nav__card__wrapper'>
-                    <p className='activity-nav__card__stats'>{completed}</p><p className='activity-nav__card__stats activity-nav__card__stats--text'>have bucketed this</p>
+                    <p className='activity-nav__card__stats'>{completed}</p>
+                    <p className='activity-nav__card__stats activity-nav__card__stats--text'>have bucketed this</p>
                 </div>
             </div>
         </article>

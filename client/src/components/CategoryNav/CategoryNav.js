@@ -1,7 +1,7 @@
 import './CategoryNav.scss';
 import CategoryLabel from '../CategoryLabel/CategoryLabel';
 
-const CategoryNav = ({ categories, filterOnClick }) => {
+const CategoryNav = ({ categories, filterOnClick, filteredCategories }) => {
     return (
         <section className='categories'>
             <ul className='categories__list'>
@@ -9,7 +9,8 @@ const CategoryNav = ({ categories, filterOnClick }) => {
                     <li key={i} className='categories__item'>
                         <CategoryLabel
                         category={category}
-                        filterOnClick={filterOnClick}/>
+                        filterOnClick={filterOnClick}
+                        filteredCategories={filteredCategories}/>
                     </li>
                 ))}
             </ul>
