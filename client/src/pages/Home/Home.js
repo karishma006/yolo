@@ -2,6 +2,7 @@ import './Home.scss';
 import { Component } from 'react';
 import axios from 'axios';
 import { API_URL } from '../../utils';
+import { categories } from '../../utils';
 import Header from '../../components/Header/Header';
 import SearchField from '../../components/SearchField/SearchField';
 import CategoryNav from '../../components/CategoryNav/CategoryNav';
@@ -36,8 +37,6 @@ class Home extends Component {
 
         const { activities } = this.state;
 
-        const uniqueCategories = [...new Set (activities.map(activity => activity.category))];
-
         const filteredActivities = activities.filter(activity => {
             return activity.title.toLowerCase().includes(this.state.searchValue.toLowerCase());
         });
@@ -48,7 +47,7 @@ class Home extends Component {
             <main className='main'>
                 <SearchField/>
                 <CategoryNav
-                categories={uniqueCategories}/>
+                categories={categories}/>
                 <ActivityNav
                 activities={activities}
                 activitiesOnChange={this.activitiesOnChange}

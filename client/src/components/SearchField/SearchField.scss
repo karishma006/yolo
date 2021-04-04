@@ -20,7 +20,7 @@
     }
 
     &::placeholder {
-        color: $primary-color-4;
+        color: $accent-color;
         @include mob-p2;
         @include regular;
     }

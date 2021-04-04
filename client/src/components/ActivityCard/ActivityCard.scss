@@ -53,7 +53,7 @@
             }
         }
 
-        &--category-fitness {
+        &--category-creativity {
             @include border-category-2;
 
             &:hover {
@@ -77,7 +77,7 @@
             }
         }
 
-        &--category-creativity {
+        &--category-fitness {
             @include border-category-5;
 
             &:hover {

@@ -5,6 +5,7 @@ import Header from '../../components/Header/Header';
 import UserImage from '../../assets/images/user-0.jpg';
 import AddIcon from '../../assets/icons/add.svg';
 import { API_URL } from '../../utils';
+import { categories } from '../../utils';
 import CategoryBar from '../../components/CategoryBar/CategoryBar';
 import Button from '../../components/Button/Button';
 import './UserBucket.scss';
@@ -31,15 +32,13 @@ class UserBucket extends Component {
 
         const { activities } = this.state;
 
-        const uniqueCategories = [...new Set (activities.map(activity => activity.category))];
-
         return (
             <>
             <Header/>
             <main className='user-profile'>
                 <img src={UserImage} alt='user-image' className='user-profile__image'/>
                 <ul className='user-bucket__categories'>
-                    {uniqueCategories.map((category, i) => (
+                    {categories.map((category, i) => (
                         <li key={i} className='user-bucket__category-bar'>
                             <CategoryBar
                             category={category}/>
