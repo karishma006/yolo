@@ -1,10 +1,11 @@
 import './ActivityDetails.scss';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+
 import { API_URL } from '../../utils';
 import BackIcon from '../../assets/icons/back.svg';
 import DownIcon from '../../assets/icons/down.svg';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Button from '../../components/Button/Button';
 
 const ActivityDetails = (props) => {
@@ -20,6 +21,7 @@ const ActivityDetails = (props) => {
     }, []);    
 
     const { id, category, title, description, knowMore, reviews } = activity;
+    const history = useHistory();
 
     const addToBucket = (event) => {
         event.preventDefault();
@@ -39,7 +41,9 @@ const ActivityDetails = (props) => {
 
     return (
         <main className={`activity activity--category-${category}`}>
-            <img className='activity__back-icon' src={BackIcon} alt='Back Icon'/>
+            <Link onClick={() => history.goBack()} className='activity__back-icon'>
+                <img src={BackIcon} alt='Back Icon'/>
+            </Link>
             <article className='activity__card'>
                 <h3 className='activity__card__title'>{title}</h3>
                 <p className='activity__card__description'>{description}</p>

@@ -10,6 +10,7 @@ import ActivityNav from '../../components/ActivityNav/ActivityNav';
 
 class Home extends Component {
     state = {
+        allActivities: [],
         activities : [],
         searchValue: '',
     };
@@ -19,14 +20,21 @@ class Home extends Component {
         .get(`${API_URL}/`)
         .then(response => {
             this.setState({
+                allActivities: response.data,
                 activities: response.data,
             });
         });
     };
 
+    filteredActivities = (searchValue) => this.state.allActivities.filter(activity => {
+        return activity.title.toLowerCase().includes(searchValue.toLowerCase());
+    });
+
     activitiesOnChange = (event) => {
+        const newActivities = this.filteredActivities(event.target.value)
         this.setState({
-            searchValue: event.taget.value,
+            searchValue: event.target.value,
+            activities: newActivities,
         });
     };
 
@@ -37,21 +45,17 @@ class Home extends Component {
 
         const { activities } = this.state;
 
-        const filteredActivities = activities.filter(activity => {
-            return activity.title.toLowerCase().includes(this.state.searchValue.toLowerCase());
-        });
-
         return (
             <>
             <Header/>
             <main className='main'>
-                <SearchField/>
+                <SearchField
+                activitiesOnChange={this.activitiesOnChange}
+                searchValue={this.state.searchValue}/>
                 <CategoryNav
                 categories={categories}/>
                 <ActivityNav
-                activities={activities}
-                activitiesOnChange={this.activitiesOnChange}
-                searchValue={this.state.searchValue}/>
+                activities={activities}/>
             </main>
             </>
         );

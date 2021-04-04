@@ -1,6 +1,7 @@
 import './ActivityReviews.scss';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link, useHistory } from 'react-router-dom';
 import { API_URL } from '../../utils';
 import BackIcon from '../../assets/icons/back.svg';
 import ReviewCard from '../../components/ReviewCard/ReviewCard';
@@ -19,6 +20,7 @@ const ActivityReviews = (props) => {
     }, []);  
 
     const { id, category, title, reviews } = activity;
+    const history = useHistory();
 
     const addToBucket = (event) => {
         event.preventDefault();
@@ -39,7 +41,9 @@ const ActivityReviews = (props) => {
     return (
         <main className={`reviews reviews--category-${category}`}>
             <div className='reviews__header'>
-                <img className='reviews__back-icon' src={BackIcon} alt='Back Icon'/>
+                <Link onClick={() => history.goBack()} className='reviews__back-icon'>
+                    <img src={BackIcon} alt='Back Icon'/>
+                </Link>
                 <h3 className='reviews__title'>{title}</h3>
             </div>
             <article className='reviews__card'>
