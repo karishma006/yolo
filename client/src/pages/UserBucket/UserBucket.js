@@ -8,6 +8,7 @@ import { API_URL } from '../../utils';
 import { categories } from '../../utils';
 import CategoryBar from '../../components/CategoryBar/CategoryBar';
 import Button from '../../components/Button/Button';
+import BucketCard from '../../components/BucketCard/BucketCard';
 import './UserBucket.scss';
 
 class UserBucket extends Component {
@@ -31,28 +32,39 @@ class UserBucket extends Component {
         };
 
         const { activities } = this.state;
+        console.log(activities);
 
         return (
             <>
             <Header/>
-            <main className='user-profile'>
-                <img src={UserImage} alt='user-image' className='user-profile__image'/>
-                <ul className='user-bucket__categories'>
+            <main className='profile'>
+                <img src={UserImage} alt='user-image' className='profile__image'/>
+                <ul className='bucket-list__categories'>
                     {categories.map((category, i) => (
-                        <li key={i} className='user-bucket__category-bar'>
+                        <li key={i} className='bucket-list__category-bar'>
                             <CategoryBar
                             category={category}/>
                         </li>
                     ))}
                 </ul>
                 <Button
-                className='user-bucket__button'
+                className='bucket-list__button'
                 text='CHALLENGE ME!'/>
-                <section className='user-bucket'>
-                    <header className='user-bucket__header'>
-                        <p className='user-bucket__heading'>My Bucket</p>
-                        <img className='user-bucket__icon' src={AddIcon} alt='plus-icon'/>
+                <section className='bucket-list'>
+                    <header className='bucket-list__header'>
+                        <p className='bucket-list__heading'>My Bucket</p>
+                        <img className='bucket-list__icon' src={AddIcon} alt='plus-icon'/>
                     </header>
+                    <ul className='bucket-list__list'>
+                    {activities.map(activity => (
+                        <li 
+                        key={activity.id} 
+                        className='bucket-list__item'>
+                            <BucketCard
+                            activity={activity}/>
+                        </li>
+                    ))}
+                </ul>
                 </section>
             </main>
             </>

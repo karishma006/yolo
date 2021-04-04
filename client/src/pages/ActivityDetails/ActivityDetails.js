@@ -20,7 +20,7 @@ const ActivityDetails = (props) => {
         });
     }, []);    
 
-    const { id, category, title, description, knowMore, reviews } = activity;
+    const { id, category, title, image, description, knowMore, reviews } = activity;
     const history = useHistory();
 
     const addToBucket = (event) => {
@@ -30,6 +30,7 @@ const ActivityDetails = (props) => {
             activityId: id,
             category: category,
             title: title,
+            image: image,
         };
 
         axios

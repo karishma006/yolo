@@ -1,0 +1,63 @@
+@use '../../partials/resets' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+.bucket-list {
+    &__card {
+        @include activityCard;
+
+        &--category-intelligence {
+            @include border-category-1;
+        }
+
+        &--category-creativity {
+            @include border-category-2;
+        }
+
+        &--category-fun {
+            @include border-category-3;
+        }
+
+        &--category-adventure {
+            @include border-category-4;
+        }
+
+        &--category-fitness {
+            @include border-category-5;
+        }
+
+        &__image {
+            @include activityImage;
+        }
+
+        &__right {
+            @include flex-column;
+            justify-content: space-between;
+            align-items: center;
+            width: calc(100% - 8.625rem);
+            padding: $mob-margin-y-6 $mob-margin-x;
+        }
+
+        &__title {
+            @include mob-p2;
+            @include bold;
+            color: $primary-color-1;
+        }
+
+        &__button {
+            width: 100%;
+            padding: $mob-margin-y-2 $mob-margin-x;
+            border: 0.125rem solid $accent-color;
+            border-radius: 1.125rem;
+            color: $accent-color;
+            @include mob-p2;
+            background-color: $primary-color-2;
+
+            &:hover {
+                background-color: $primary-color-1;
+                border: 0.125rem solid $primary-color-1;
+                color: $primary-color-2;
+            }
+        }
+    }
+}

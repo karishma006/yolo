@@ -1,9 +1,9 @@
 import './SearchField.scss';
 
-const SearchField = ({ activitiesOnChange, searchValue }) => {
+const SearchField = ({ searchOnChange, searchValue }) => {
     return (
         <label>
-            <input className='search' type='search' name='search' placeholder='Search' onChange={activitiesOnChange} value={searchValue}/>
+            <input className='search' type='search' name='search' placeholder='Search' onChange={searchOnChange} value={searchValue}/>
         </label>
     );
 };

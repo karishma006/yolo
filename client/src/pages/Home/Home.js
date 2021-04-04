@@ -13,6 +13,7 @@ class Home extends Component {
         allActivities: [],
         activities : [],
         searchValue: '',
+        filteredCategories: [],
     };
 
     componentDidMount() {
@@ -26,12 +27,12 @@ class Home extends Component {
         });
     };
 
-    filteredActivities = (searchValue) => this.state.allActivities.filter(activity => {
+    searchActivities = (searchValue) => this.state.allActivities.filter(activity => {
         return activity.title.toLowerCase().includes(searchValue.toLowerCase());
     });
 
-    activitiesOnChange = (event) => {
-        const newActivities = this.filteredActivities(event.target.value)
+    searchOnChange = (event) => {
+        const newActivities = this.searchActivities(event.target.value)
         this.setState({
             searchValue: event.target.value,
             activities: newActivities,
@@ -50,7 +51,7 @@ class Home extends Component {
             <Header/>
             <main className='main'>
                 <SearchField
-                activitiesOnChange={this.activitiesOnChange}
+                searchOnChange={this.searchOnChange}
                 searchValue={this.state.searchValue}/>
                 <CategoryNav
                 categories={categories}/>

@@ -6,6 +6,11 @@
     &__card {
         @include flex-column;
         align-items: center;
+        text-decoration: none;
+
+        &--active {
+            border-bottom: 0.25rem solid $accent-color;
+        }
     }
 
     &__circle {
@@ -51,5 +56,6 @@
         @include mob-p3;
         margin-top: $mob-margin-y-3;
         text-transform: capitalize;
+        color: $primary-color-1;
     }
 }

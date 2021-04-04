@@ -15,12 +15,12 @@ const icons = {
 
 const CategoryLabel = ({ category }) => {
     return (
-        <article className='categories__card'>
+        <a className='categories__card categories__card--active' href='#'>
             <div className={`categories__circle categories__circle--category-${category}`}>
                 <img src={icons[category]} alt={category}/>
             </div>
             <p className='categories__label'>{category}</p>
-        </article>
+        </a>
     );
 };
 

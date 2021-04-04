@@ -4,21 +4,14 @@
 
 .activity-nav {
     &__card {
-    width: 100%;
-    height: 8.875rem;
-    margin-bottom: $mob-margin-y-4;
-    @include rounded-corners;
-    @include flex-row;
+    @include activityCard;
 
     &:hover {
         color: $primary-color-2;
     }
 
         &__image {
-            border-radius: 0.35rem;
-            width: 8.625rem;
-            height: 8.625rem;
-            object-fit: cover;
+            @include activityImage;
         }
 
         &__right {

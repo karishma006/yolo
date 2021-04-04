@@ -15,13 +15,13 @@ router.get('/mybucket', (_request, response) => {
 });
 
 router.post('/mybucket/add', (request, response) => {
-    const { activityId, title, category, status } = request.body;
+    const { activityId, title, image, category, status } = request.body;
 
     const newUserActivity = {
         id: uniqid(),
         activityId: activityId,
         title: title,
-        image: 'http://localhost:8080/files/activity-9.jpg',
+        image: image,
         category: category,
         done: false,
     };

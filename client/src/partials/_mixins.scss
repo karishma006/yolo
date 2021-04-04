@@ -111,3 +111,18 @@
 @mixin background-category-5 {
     background-color: $category-color-5;
 }
+
+@mixin activityCard {
+    width: 100%;
+    height: 8.875rem;
+    margin-bottom: $mob-margin-y-4;
+    @include rounded-corners;
+    @include flex-row;
+}
+
+@mixin activityImage {
+    border-radius: 0.35rem;
+    width: 8.625rem;
+    height: 8.625rem;
+    object-fit: cover;
+}
