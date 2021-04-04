@@ -55,7 +55,8 @@ const ActivityReviews = (props) => {
                 {reviews && reviews.map(review => 
                     <ReviewCard
                     key={review.id}
-                    review={review}/>
+                    review={review}
+                    category={category}/>
                 )}
             </article>
         </main>

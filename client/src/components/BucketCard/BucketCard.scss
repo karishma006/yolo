@@ -39,7 +39,7 @@
         }
 
         &__title {
-            @include mob-p2;
+            @include mob-h2;
             @include bold;
             color: $primary-color-1;
         }

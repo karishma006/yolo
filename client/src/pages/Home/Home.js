@@ -13,7 +13,14 @@ class Home extends Component {
         allActivities: [],
         activities : [],
         searchValue: '',
-        filteredCategories: [],
+        showAllCategories: true,
+        filteredCategories: { 
+            intelligence: false,
+            creativity: false,
+            fun: false,
+            adventure: false,
+            fitness: false,
+        },
     };
 
     componentDidMount() {
@@ -39,6 +46,20 @@ class Home extends Component {
         });
     };
 
+    filterOnClick = (event) => {
+        event.preventDefault();
+        console.log("I'm getting called " + event.target.alt + " " + this.state.filteredCategories[event.target.alt]);
+        
+        const filteredCategoriesClone = JSON.parse(JSON.stringify(this.state.filteredCategories));
+        filteredCategoriesClone[event.target.alt] = !filteredCategoriesClone[event.target.alt] // toggle the categegory clicked
+        const newShowAllCategory = !Object.values(filteredCategoriesClone).some(Boolean); // check if any are true.
+        
+        this.setState({ 
+            filteredCategories: filteredCategoriesClone, 
+            showAllCategories: newShowAllCategory 
+        });
+    };
+
     render() {
         if (this.state.activities === []) {
             return <div>Loading...</div>
@@ -54,7 +75,8 @@ class Home extends Component {
                 searchOnChange={this.searchOnChange}
                 searchValue={this.state.searchValue}/>
                 <CategoryNav
-                categories={categories}/>
+                categories={categories}
+                filterOnClick={this.filterOnClick}/>
                 <ActivityNav
                 activities={activities}/>
             </main>

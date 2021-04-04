@@ -13,9 +13,9 @@ const icons = {
     'creativity': Creativity,
 };
 
-const CategoryLabel = ({ category }) => {
+const CategoryLabel = ({ category, filterOnClick }) => {
     return (
-        <a className='categories__card categories__card--active' href='#'>
+        <a className='categories__card categories__card--active' href='#' onClick={filterOnClick}>
             <div className={`categories__circle categories__circle--category-${category}`}>
                 <img src={icons[category]} alt={category}/>
             </div>

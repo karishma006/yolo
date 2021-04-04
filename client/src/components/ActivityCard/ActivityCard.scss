@@ -27,7 +27,7 @@
 
         &__wrapper {
             @include flex-row;
-            margin-bottom: $mob-margin-y-3;
+            margin-top: $mob-margin-y-3;
         }
 
         &__stats {
