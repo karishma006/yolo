@@ -47,7 +47,7 @@
         height: 2rem;
     }
 
-    &__title {
+    &__label {
         @include mob-p3;
         margin-top: $mob-margin-y-3;
         text-transform: capitalize;

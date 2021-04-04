@@ -1,0 +1,12 @@
+@use '../../partials/resets' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+.category-bar {
+    @include flex-row;
+
+    &__label {
+        @include mob-p3;
+        text-transform: capitalize;
+    }
+}

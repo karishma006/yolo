@@ -2,7 +2,7 @@
 @use '../../partials/mixins' as *;
 @use '../../partials/variables' as *;
 
-.activity__card__button, .reviews__card__button {
+.activity__card__button, .reviews__card__button, .user-profile__button {
     width: 100%;
     background-color: $accent-color;
     padding: $mob-margin-y-3 $mob-margin-y-4;

@@ -19,7 +19,7 @@ const CategoryLabel = ({ category }) => {
             <div className={`categories__circle categories__circle--category-${category}`}>
                 <img src={icons[category]} alt={category}/>
             </div>
-            <p className='categories__title'>{category}</p>
+            <p className='categories__label'>{category}</p>
         </article>
     );
 };
