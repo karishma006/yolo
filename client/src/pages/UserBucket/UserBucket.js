@@ -25,17 +25,29 @@ class UserBucket extends Component {
     };
 
     render() {
-        const { category } = this.state.activities;
+        if (this.state.activities === []) {
+            return <div>Loading...</div>
+        };
+
+        const { activities } = this.state;
+
+        const uniqueCategories = [...new Set (activities.map(activity => activity.category))];
 
         return (
             <>
             <Header/>
             <main className='user-profile'>
                 <img src={UserImage} alt='user-image' className='user-profile__image'/>
-                <CategoryBar
-                category={category}/>
+                <ul className='user-bucket__categories'>
+                    {uniqueCategories.map((category, i) => (
+                        <li key={i} className='user-bucket__category-bar'>
+                            <CategoryBar
+                            category={category}/>
+                        </li>
+                    ))}
+                </ul>
                 <Button
-                className='user-profile__button'
+                className='user-bucket__button'
                 text='CHALLENGE ME!'/>
                 <section className='user-bucket'>
                     <header className='user-bucket__header'>

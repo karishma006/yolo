@@ -15,13 +15,17 @@ const icons = {
 
 const CategoryBar = ({ category }) => {
     return (
-        <article className='category-bar'>
-            <p className='category-bar__label'>{category}</p>
+        <article className='category-bar'>   
             <div className='category-bar__element'>
                 <div className={`category-bar__circle category-bar__circle--category-${category}`}>
                     <img src={icons[category]} alt={category}/>
                 </div>
-                <div className='category-bar__status'></div>
+                <div className='category-bar__wrapper'>
+                    <p className='category-bar__label'>{category}</p>
+                    <div className='category-bar__full'>      
+                        <div className='category-bar__status'></div>
+                    </div>
+                </div>
             </div>   
         </article>
     );

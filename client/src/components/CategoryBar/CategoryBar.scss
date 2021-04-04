@@ -3,10 +3,65 @@
 @use '../../partials/variables' as *;
 
 .category-bar {
-    @include flex-row;
+    @include flex-column;
+
+    &__element {
+        width: 100%;
+        @include flex-row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__circle {
+        width: 3rem;
+        height: 3rem;
+        @include rounded;
+        @include flex-row;
+        justify-content: center;
+        align-items: center;
+
+        &--category-intelligence {
+            @include background-category-1;
+        }
+
+        &--category-fitness {
+            @include background-category-2;
+        }
+
+        &--category-fun {
+            @include background-category-3;
+        }
+
+        &--category-adventure {
+            @include background-category-4;
+        }
+
+        &--category-creativity {
+            @include background-category-5;
+        }
+    }
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    &__wrapper {
+        width: calc(100% - 3rem);
+        margin-top: -1rem;
+    }
+
+    &__full {
+        background-color: $primary-color-4;
+        height: $mob-margin-y-3;
+        border-radius: 0 0.25rem 0.25rem 0;
+        @include flex-column;
+    }
 
     &__label {
         @include mob-p3;
         text-transform: capitalize;
+        margin-left: auto;
+        text-align: right;
     }
 }

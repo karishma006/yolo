@@ -21,6 +21,16 @@
     margin-top: $mob-margin-y-6;
     margin-bottom: $mob-margin-y-5;
 
+    &__categories {
+        list-style-type: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    &__category-bar {
+        margin-bottom: $mob-margin-y-3;
+    }
+
     &__header {
         @include flex-row;
         justify-content: space-between;
