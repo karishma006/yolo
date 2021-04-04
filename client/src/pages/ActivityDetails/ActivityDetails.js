@@ -21,8 +21,20 @@ const ActivityDetails = (props) => {
 
     const { id, category, title, description, knowMore, reviews } = activity;
 
-    if (activity === {}) {
-        return <div>Loading...</div>
+    const addToBucket = (event) => {
+        event.preventDefault();
+
+        const userActivity = {
+            activityId: id,
+            category: category,
+            title: title,
+        };
+
+        axios
+        .post(`${API_URL}/mybucket/add`, userActivity)
+        .then(response => {
+            console.log(response);
+        });
     };
 
     return (
@@ -34,7 +46,8 @@ const ActivityDetails = (props) => {
                 <a href={knowMore} target='_blank' className='activity__card__link'>Know more</a>
                 <Button
                 className='activity__card__button'
-                text='+ Add to my bucket'/>           
+                text='+ Add to my bucket'
+                onClick={addToBucket}/>           
             </article>
             <div className='activity__wrapper'>
                 <p className='activity__text'>See what people are saying</p>
