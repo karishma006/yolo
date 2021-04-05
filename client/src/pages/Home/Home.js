@@ -21,7 +21,7 @@ class Home extends Component {
             adventure: false,
             fitness: false,
         },
-    }
+    };
 
     filterOnClick = (category, event) => {
         event.preventDefault();

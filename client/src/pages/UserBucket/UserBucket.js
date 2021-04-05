@@ -18,7 +18,7 @@ class UserBucket extends Component {
 
     componentDidMount() {
         axios
-        .get(`${API_URL}/mybucket/activities`)
+        .get(`${API_URL}/user-bucket/activities`)
         .then(response => {
             this.setState({
                 userActivities: response.data,
@@ -38,7 +38,7 @@ class UserBucket extends Component {
         event.preventDefault();
 
         axios
-        .delete(`${API_URL}/mybucket/user-activities/${id}`)
+        .delete(`${API_URL}/user-bucket/activities/${id}`)
         .then(response => {
             console.log(response);
             const updatedUserActivities = this.deleteActivity(id);
@@ -49,6 +49,28 @@ class UserBucket extends Component {
         });
 
         console.log(id);
+    };
+
+    markDoneActivity = (id) => {
+        const newUserActivities = JSON.parse(JSON.stringify(this.state.userActivities));
+        const doneActivity = newUserActivities.find(userActivity => userActivity.id === id);
+        doneActivity.done = true;
+        return newUserActivities;
+    }; 
+
+    handleDone = (event, id) => {
+        event.preventDefault();
+
+        axios
+        .put(`${API_URL}/mybucket/user-activities/${id}`)
+        .then(response => {
+            console.log(response);
+            const newUserActivities = this.markDoneActivity(id);
+
+            this.setState({
+                userActivities: newUserActivities,
+            });
+        });
     };
 
     render() {
@@ -87,7 +109,8 @@ class UserBucket extends Component {
                         className='bucket-list__item'>
                             <BucketCard
                             activity={activity}
-                            handleDelete={this.handleDelete}/>
+                            handleDelete={this.handleDelete}
+                            handleDone={this.handleDone}/>
                         </li>
                     ))}
                 </ul>

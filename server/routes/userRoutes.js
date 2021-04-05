@@ -15,12 +15,12 @@ writeUserActivities = (userActivities) => {
     fs.writeFileSync('./data/userActivities.json', userActivitiesData);
 };
 
-router.get('/mybucket/activities', (_request, response) => {
+router.get('/user-bucket/activities', (_request, response) => {
     const userActivities = readUserActivities();
     response.status(200).json(userActivities);
 });
 
-router.post('/mybucket/activities', (request, response) => {
+router.post('/user-bucket/activities', (request, response) => {
     const { activityId, title, image, category } = request.body;
 
     const newUserActivity = {
@@ -39,7 +39,7 @@ router.post('/mybucket/activities', (request, response) => {
     response.status(200).json(newUserActivity);
 });
 
-router.delete('/mybucket/user-activities/:id', (request, response) => {
+router.delete('/user-bucket/activities/:id', (request, response) => {
     const id = request.params.id;
     const userActivities = readUserActivities();
     const deleteIndex = userActivities.findIndex(userActivity => userActivity.id === id);
@@ -47,6 +47,15 @@ router.delete('/mybucket/user-activities/:id', (request, response) => {
     writeUserActivities(userActivities);
 
     response.status(200).json('You deleted an activity');
+});
+
+router.put('/user-bucket/activities/:id', (request, response) => {
+    const id = request.params.id;
+    const userActivities = readUserActivities();
+    const doneActivity = userActivities.find(userActivity => userActivity.id === id);
+    doneActivity.done = true;
+
+    response.status(200).json(doneActivity);
 });
 
 module.exports = router;

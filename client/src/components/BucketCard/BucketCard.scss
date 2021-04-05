@@ -44,9 +44,14 @@
             padding: $mob-margin-y-4 $mob-margin-x $mob-margin-y-4 $mob-margin-x;
         }
 
+        &__link {
+            border: 0;
+            background-color: $primary-color-2;
+            margin-left: auto;
+        }
+
         &__icon {
             visibility: hidden;
-            margin-left: auto;
         }
 
         &__title {

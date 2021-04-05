@@ -34,7 +34,7 @@ const ActivityDetails = (props) => {
         };
 
         axios
-        .post(`${API_URL}/mybucket/activities`, userActivity)
+        .post(`${API_URL}/user-bucket/activities`, userActivity)
         .then(response => {
             console.log(response);
         });
