@@ -41,6 +41,7 @@
 
     &__heading {
         @include mob-h2;
+        @include bold;
     }
 
     &__list {

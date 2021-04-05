@@ -11,5 +11,7 @@
     
     &__item {
         list-style-type: none;
+        margin-left: $mob-margin-x/4;
+        margin-right: $mob-margin-x/4;
     }
 }

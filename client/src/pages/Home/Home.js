@@ -27,15 +27,20 @@ class Home extends Component {
         event.preventDefault();
 
         const filteredCategoriesClone = JSON.parse(JSON.stringify(this.state.filteredCategories));
-        filteredCategoriesClone[category] = !filteredCategoriesClone[category]
-        const newShowAllCategory = !Object.values(filteredCategoriesClone).some(Boolean)
+        filteredCategoriesClone[category] = !filteredCategoriesClone[category];
+        let newShowAllCategory = !Object.values(filteredCategoriesClone).some(Boolean);
         const categoriesToFilter = Object.keys(filteredCategoriesClone).filter(key => filteredCategoriesClone[key] === true);
-        const newActivities = newShowAllCategory ? this.state.allActivities : this.filterActivities(categoriesToFilter)
+        const newActivities = newShowAllCategory ? this.state.allActivities : this.filterActivities(categoriesToFilter);
+
+        if(Object.values(filteredCategoriesClone).every(Boolean)) {
+            newShowAllCategory = !newShowAllCategory;
+            Object.keys(filteredCategoriesClone).forEach(key => filteredCategoriesClone[key] = false);
+        };
 
         this.setState({
             filteredCategories: filteredCategoriesClone,
             showAllCategories: newShowAllCategory,
-            activities: newActivities
+            activities: newActivities,
         });
     };
 

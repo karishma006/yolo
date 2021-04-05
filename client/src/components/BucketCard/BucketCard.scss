@@ -6,6 +6,12 @@
     &__card {
         @include activityCard;
 
+        &:hover {
+            .bucket-list__card__icon {
+                visibility: visible;
+            }
+        }
+
         &--category-intelligence {
             @include border-category-1;
         }
@@ -35,23 +41,54 @@
             justify-content: space-between;
             align-items: center;
             width: calc(100% - 8.625rem);
-            padding: $mob-margin-y-6 $mob-margin-x;
+            padding: $mob-margin-y-4 $mob-margin-x $mob-margin-y-4 $mob-margin-x;
+        }
+
+        &__icon {
+            visibility: hidden;
+            margin-left: auto;
         }
 
         &__title {
+            text-align: center;
             @include mob-h2;
             @include bold;
             color: $primary-color-1;
+            margin-bottom: $mob-margin-y-3;
         }
 
         &__button {
             width: 100%;
             padding: $mob-margin-y-2 $mob-margin-x;
-            border: 0.125rem solid $accent-color;
             border-radius: 1.125rem;
-            color: $accent-color;
             @include mob-p2;
             background-color: $primary-color-2;
+            margin-bottom: $mob-margin-y-4;
+
+            &--category-intelligence {
+                @include border-category-1;
+                color: $category-color-1;
+            }
+    
+            &--category-creativity {
+                @include border-category-2;
+                color: $category-color-2;
+            }
+    
+            &--category-fun {
+                @include border-category-3;
+                color: $category-color-3;
+            }
+    
+            &--category-adventure {
+                @include border-category-4;
+                color: $category-color-4;
+            }
+    
+            &--category-fitness {
+                @include border-category-5;
+                color: $category-color-5;
+            }
 
             &:hover {
                 background-color: $primary-color-1;

@@ -6,10 +6,6 @@
     &__card {
     @include activityCard;
 
-    &:hover {
-        color: $primary-color-2;
-    }
-
         &__image {
             @include activityImage;
         }
@@ -48,7 +44,7 @@
             @include border-category-1;
 
             &:hover {
-                @include background-category-1;
+                box-shadow: 2px 2px #888888;
             }
         }
 
