@@ -15,13 +15,19 @@ writeUserActivities = (userActivities) => {
     fs.writeFileSync('./data/userActivities.json', userActivitiesData);
 };
 
-router.get('/user-bucket/activities', (_request, response) => {
+router.get('/mybucket/activities', (_request, response) => {
     const userActivities = readUserActivities();
     response.status(200).json(userActivities);
 });
 
-router.post('/user-bucket/activities', (request, response) => {
-    const { activityId, title, image, category } = request.body;
+router.get('/mybucket/activities/random', (_request, response) => {
+    const userActivities = readUserActivities();
+    const randomActivity = userActivities[Math.floor(Math.random()*userActivities.length)];
+    response.status(200).json(randomActivity.activityId);
+});
+
+router.post('/mybucket/activities', (request, response) => {
+    const { activityId, title, image, category, reviews } = request.body;
 
     const newUserActivity = {
         id: uniqid(),
@@ -30,6 +36,7 @@ router.post('/user-bucket/activities', (request, response) => {
         image: image,
         category: category,
         done: false,
+        reviews: reviews,
     };
 
     const userActivities = readUserActivities();
@@ -39,7 +46,7 @@ router.post('/user-bucket/activities', (request, response) => {
     response.status(200).json(newUserActivity);
 });
 
-router.delete('/user-bucket/activities/:id', (request, response) => {
+router.delete('/mybucket/activities/:id', (request, response) => {
     const id = request.params.id;
     const userActivities = readUserActivities();
     const deleteIndex = userActivities.findIndex(userActivity => userActivity.id === id);
@@ -49,11 +56,12 @@ router.delete('/user-bucket/activities/:id', (request, response) => {
     response.status(200).json('You deleted an activity');
 });
 
-router.put('/user-bucket/activities/:id', (request, response) => {
+router.put('/mybucket/activities/:id', (request, response) => {
     const id = request.params.id;
     const userActivities = readUserActivities();
     const doneActivity = userActivities.find(userActivity => userActivity.id === id);
     doneActivity.done = true;
+    writeUserActivities(userActivities);
 
     response.status(200).json(doneActivity);
 });

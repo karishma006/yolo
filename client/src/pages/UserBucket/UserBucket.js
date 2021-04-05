@@ -18,7 +18,7 @@ class UserBucket extends Component {
 
     componentDidMount() {
         axios
-        .get(`${API_URL}/user-bucket/activities`)
+        .get(`${API_URL}/mybucket/activities`)
         .then(response => {
             this.setState({
                 userActivities: response.data,
@@ -38,7 +38,7 @@ class UserBucket extends Component {
         event.preventDefault();
 
         axios
-        .delete(`${API_URL}/user-bucket/activities/${id}`)
+        .delete(`${API_URL}/mybucket/activities/${id}`)
         .then(response => {
             console.log(response);
             const updatedUserActivities = this.deleteActivity(id);
@@ -62,7 +62,7 @@ class UserBucket extends Component {
         event.preventDefault();
 
         axios
-        .put(`${API_URL}/mybucket/user-activities/${id}`)
+        .put(`${API_URL}/mybucket/activities/${id}`)
         .then(response => {
             console.log(response);
             const newUserActivities = this.markDoneActivity(id);
@@ -70,6 +70,16 @@ class UserBucket extends Component {
             this.setState({
                 userActivities: newUserActivities,
             });
+        });
+    };
+
+    handleChallenge = (event) => {
+        event.preventDefault();
+
+        axios
+        .get(`${API_URL}/mybucket/activities/random`)
+        .then(response => {
+            this.props.history.push(`/activities/${response.data}`);
         });
     };
 
@@ -96,7 +106,8 @@ class UserBucket extends Component {
                 </ul>
                 <Button
                 className='bucket-list__button'
-                text='CHALLENGE ME!'/>
+                text='CHALLENGE ME!'
+                onClick={this.handleChallenge}/>
                 <section className='bucket-list'>
                     <header className='bucket-list__header'>
                         <p className='bucket-list__heading'>My Bucket</p>

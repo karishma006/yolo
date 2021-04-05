@@ -4,6 +4,7 @@ import RemoveIconCreativity from '../../assets/icons/creativity-remove.svg';
 import RemoveIconFun from '../../assets/icons/fun-remove.svg';
 import RemoveIconAdventure from '../../assets/icons/adventure-remove.svg';
 import RemoveIconFitness from '../../assets/icons/fitness-remove.svg';
+import { Link } from 'react-router-dom';
 
 const removeIcons = {
     'intelligence': RemoveIconIntelligence,
@@ -20,11 +21,15 @@ const BucketCard = ({ activity, handleDelete, handleDone }) => {
         <article className={`bucket-list__card bucket-list__card--category-${category}`}>
             <img className='bucket-list__card__image' src={image} alt={title}/>
             <div className='bucket-list__card__right'> 
-                <button className='bucket-list__card__link' onClick={(event) => handleDelete(event, id)}>
+                {!done && <button className='bucket-list__card__link' onClick={(event) => handleDelete(event, id)}>
                     <img src={removeIcons[category]} className='bucket-list__card__icon'/>
-                </button>
+                </button>}
                 <p className='bucket-list__card__title'>{title}</p>
-                <button className={`bucket-list__card__button bucket-list__card__button--category-${category}`} onClick={(event) => handleDone(event, id)}>Mark as Done</button>
+                {done ? 
+                <>
+                <p className='bucket-list__card__done'>Done!</p>
+                <Link to='#'>Leave a Review</Link> </>: 
+                <button className={`bucket-list__card__button bucket-list__card__button--category-${category}`} onClick={(event) => handleDone(event, id)}>Mark as Done</button>}
             </div>
         </article>
     );

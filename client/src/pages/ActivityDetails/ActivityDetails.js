@@ -10,6 +10,7 @@ import Button from '../../components/Button/Button';
 
 const ActivityDetails = (props) => {
     const [activity, setActivity] = useState({});
+    const [addedToBucket, setAddedToBucket] = useState(false);
     const { activityId } = props.match.params;
 
     useEffect(() => {
@@ -31,12 +32,14 @@ const ActivityDetails = (props) => {
             category: category,
             title: title,
             image: image,
+            reviews: reviews,
         };
 
         axios
-        .post(`${API_URL}/user-bucket/activities`, userActivity)
+        .post(`${API_URL}/mybucket/activities`, userActivity)
         .then(response => {
             console.log(response);
+            setAddedToBucket(true);
         });
     };
 
@@ -49,10 +52,12 @@ const ActivityDetails = (props) => {
                 <h3 className='activity__card__title'>{title}</h3>
                 <p className='activity__card__description'>{description}</p>
                 <a href={knowMore} target='_blank' className='activity__card__link'>Know more</a>
+                {addedToBucket ? 
+                <Link to='/mybucket'>View in Bucket</Link> : 
                 <Button
                 className='activity__card__button'
                 text='+ Add to my bucket'
-                onClick={addToBucket}/>           
+                onClick={addToBucket}/>}
             </article>
             <div className='activity__wrapper'>
                 <p className='activity__text'>See what people are saying</p>

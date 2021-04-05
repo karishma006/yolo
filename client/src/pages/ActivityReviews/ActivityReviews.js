@@ -32,7 +32,7 @@ const ActivityReviews = (props) => {
         };
 
         axios
-        .post(`${API_URL}/user-bucket/activities`, userActivity)
+        .post(`${API_URL}/mybucket/activities`, userActivity)
         .then(response => {
             console.log(response);
         });

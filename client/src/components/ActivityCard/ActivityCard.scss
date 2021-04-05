@@ -44,7 +44,7 @@
             @include border-category-1;
 
             &:hover {
-                box-shadow: 2px 2px #888888;
+                @include background-category-1;
             }
         }
 
