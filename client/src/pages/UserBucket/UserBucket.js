@@ -13,26 +13,51 @@ import './UserBucket.scss';
 
 class UserBucket extends Component {
     state = {
-        activities: [],
+        userActivities: [],
     };
 
     componentDidMount() {
         axios
-        .get(`${API_URL}/mybucket`)
+        .get(`${API_URL}/mybucket/activities`)
         .then(response => {
             this.setState({
-                activities: response.data,
+                userActivities: response.data,
             });
         });
     };
 
+    deleteActivity = (id) => {
+        const newUserActivities = JSON.parse(JSON.stringify(this.state.userActivities));
+        const deleteIndex = newUserActivities.findIndex(userActivity => userActivity.id === id);
+        newUserActivities.splice(deleteIndex, 1);
+
+        return newUserActivities;
+    };
+
+    handleDelete = (event, id) => {
+        event.preventDefault();
+
+        axios
+        .delete(`${API_URL}/mybucket/user-activities/${id}`)
+        .then(response => {
+            console.log(response);
+            const updatedUserActivities = this.deleteActivity(id);
+
+            this.setState({
+                userActivities: updatedUserActivities,
+            });
+        });
+
+        console.log(id);
+    };
+
     render() {
-        if (this.state.activities === []) {
+        if (this.state.userActivities === []) {
             return <div>Loading...</div>
         };
 
-        const { activities } = this.state;
-        console.log(activities);
+        const { userActivities } = this.state;
+        console.log(userActivities);
 
         return (
             <>
@@ -56,12 +81,13 @@ class UserBucket extends Component {
                         <img className='bucket-list__icon' src={AddIcon} alt='plus-icon'/>
                     </header>
                     <ul className='bucket-list__list'>
-                    {activities.map(activity => (
+                    {userActivities.map(activity => (
                         <li 
                         key={activity.id} 
                         className='bucket-list__item'>
                             <BucketCard
-                            activity={activity}/>
+                            activity={activity}
+                            handleDelete={this.handleDelete}/>
                         </li>
                     ))}
                 </ul>

@@ -13,14 +13,16 @@ const removeIcons = {
     'fitness': RemoveIconFitness,
 };
 
-const BucketCard = ({ activity }) => {
-    const { title, image, category, done } = activity;
+const BucketCard = ({ activity, handleDelete }) => {
+    const { id, title, image, category, done } = activity;
 
     return (
         <article className={`bucket-list__card bucket-list__card--category-${category}`}>
             <img className='bucket-list__card__image' src={image} alt={title}/>
             <div className='bucket-list__card__right'> 
-                <img src={removeIcons[category]} className='bucket-list__card__icon'/>
+                <button className='bucket-list__card__link' onClick={(event) => handleDelete(event, id)}>
+                    <img src={removeIcons[category]} className='bucket-list__card__icon'/>
+                </button>
                 <p className='bucket-list__card__title'>{title}</p>
                 <button className={`bucket-list__card__button bucket-list__card__button--category-${category}`}>Mark as Done</button>
             </div>

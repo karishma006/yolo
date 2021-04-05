@@ -1,3 +1,4 @@
+const { request, response } = require('express');
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
@@ -9,13 +10,18 @@ readUserActivities = () => {
     return parsedData;
 };
 
-router.get('/mybucket', (_request, response) => {
+writeUserActivities = (userActivities) => {
+    const userActivitiesData = JSON.stringify(userActivities, null, '');
+    fs.writeFileSync('./data/userActivities.json', userActivitiesData);
+};
+
+router.get('/mybucket/activities', (_request, response) => {
     const userActivities = readUserActivities();
     response.status(200).json(userActivities);
 });
 
-router.post('/mybucket/add', (request, response) => {
-    const { activityId, title, image, category, status } = request.body;
+router.post('/mybucket/activities', (request, response) => {
+    const { activityId, title, image, category } = request.body;
 
     const newUserActivity = {
         id: uniqid(),
@@ -31,7 +37,16 @@ router.post('/mybucket/add', (request, response) => {
     fs.writeFileSync('./data/userActivities.json', JSON.stringify(userActivities));
 
     response.status(200).json(newUserActivity);
+});
 
+router.delete('/mybucket/user-activities/:id', (request, response) => {
+    const id = request.params.id;
+    const userActivities = readUserActivities();
+    const deleteIndex = userActivities.findIndex(userActivity => userActivity.id === id);
+    userActivities.splice(deleteIndex, 1);
+    writeUserActivities(userActivities);
+
+    response.status(200).json('You deleted an activity');
 });
 
 module.exports = router;
