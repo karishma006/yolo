@@ -60,6 +60,10 @@
             @include bold;
             color: $primary-color-1;
             margin-bottom: $mob-margin-y-3;
+
+            &--done {
+                color: $primary-color-2;
+            }
         }
 
         &__button {
@@ -100,6 +104,42 @@
                 border: 0.125rem solid $primary-color-1;
                 color: $primary-color-2;
             }
+        }
+
+        &__status {
+            color: $primary-color-1;
+            @include mob-h3;
+            @include semi-bold;
+            padding-bottom: $mob-margin-y-3;
+            color: $primary-color-2;
+        }
+
+        &__review {
+            text-decoration: none;
+            color: $primary-color-1;
+            @include mob-p2;
+            text-decoration: underline;
+            color: $primary-color-2;
+        }
+
+        &__done-intelligence {
+            @include background-category-1; 
+        }
+
+        &__done-creativity {
+            @include background-category-2; 
+        }
+
+        &__done-fun {
+            @include background-category-3; 
+        }
+
+        &__done-adventure {
+            @include background-category-4; 
+        }
+
+        &__done-fitness {
+            @include background-category-5; 
         }
     }
 }

@@ -15,20 +15,20 @@ const removeIcons = {
 };
 
 const BucketCard = ({ activity, handleDelete, handleDone }) => {
-    const { id, title, image, category, done } = activity;
+    const { id, title, image, category, done, activityId } = activity;
 
     return (
-        <article className={`bucket-list__card bucket-list__card--category-${category}`}>
+        <article className={`${done ? `bucket-list__card__done-${category}` : ''} bucket-list__card bucket-list__card--category-${category}`}>
             <img className='bucket-list__card__image' src={image} alt={title}/>
             <div className='bucket-list__card__right'> 
                 {!done && <button className='bucket-list__card__link' onClick={(event) => handleDelete(event, id)}>
                     <img src={removeIcons[category]} className='bucket-list__card__icon'/>
                 </button>}
-                <p className='bucket-list__card__title'>{title}</p>
+                <p className={`${done ? 'bucket-list__card__title--done' : 'bucket-list__card__title'}`}>{title}</p>
                 {done ? 
                 <>
-                <p className='bucket-list__card__done'>Done!</p>
-                <Link to='#'>Leave a Review</Link> </>: 
+                <p className='bucket-list__card__status'>Done!</p>
+                <Link to={`/activities/${activityId}/reviews`} className='bucket-list__card__review'>Leave a Review</Link> </>: 
                 <button className={`bucket-list__card__button bucket-list__card__button--category-${category}`} onClick={(event) => handleDone(event, id)}>Mark as Done</button>}
             </div>
         </article>

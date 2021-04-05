@@ -6,6 +6,7 @@ import { API_URL } from '../../utils';
 import BackIcon from '../../assets/icons/back.svg';
 import ReviewCard from '../../components/ReviewCard/ReviewCard';
 import Button from '../../components/Button/Button';
+import AddReviewForm from '../../components/AddReviewForm/AddReviewForm';
 
 const ActivityReviews = (props) => {
     const [activity, setActivity] = useState({});
@@ -51,6 +52,8 @@ const ActivityReviews = (props) => {
                 className='reviews__card__button'
                 text='+ Add to my bucket'
                 onClick={addToBucket}/>
+                <AddReviewForm
+                category={category}/>
                 <h3 className='reviews__card__heading'>Reviews</h3>
                 {reviews && reviews.map(review => 
                     <ReviewCard

@@ -26,7 +26,7 @@ const CategoryBar = ({ category }) => {
                     <p className='category-bar__label'>{category}</p>
                     <ProgressBar
                     completed={80}
-                    baseBgColor='#E4E4E4'
+                    baseBgColor='#F3DAC3'
                     bgColor={categories[category]['color']}
                     height='0.5rem'
                     borderRadius='0 0.25rem 0.25rem 0'

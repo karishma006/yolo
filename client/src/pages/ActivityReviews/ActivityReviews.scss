@@ -53,6 +53,7 @@
 
         &__heading {
             margin-top: $mob-margin-y-5;
+            @include mob-h2;
         }
     }
 }
