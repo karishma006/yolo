@@ -42,42 +42,22 @@
 
         &--category-intelligence {
             @include border-category-1;
-
-            &:hover {
-                @include background-category-1;
-            }
         }
 
         &--category-creativity {
             @include border-category-2;
-
-            &:hover {
-                @include background-category-2;
-            }
         }
 
         &--category-fun {
             @include border-category-3;
-
-            &:hover {
-                @include background-category-3;
-            }
         }
 
         &--category-adventure {
             @include border-category-4;
-
-            &:hover {
-                @include background-category-4;
-            }
         }
 
         &--category-fitness {
             @include border-category-5;
-
-            &:hover {
-                @include background-category-5;
-            }
         }
     }
 }
