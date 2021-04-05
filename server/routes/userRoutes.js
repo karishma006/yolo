@@ -40,7 +40,7 @@ router.post('/mybucket/activities', (request, response) => {
     };
 
     const userActivities = readUserActivities();
-    userActivities.push(newUserActivity);
+    userActivities.unshift(newUserActivity);
     fs.writeFileSync('./data/userActivities.json', JSON.stringify(userActivities));
 
     response.status(200).json(newUserActivity);

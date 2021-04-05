@@ -19,6 +19,7 @@ const ActivityCard = ({ activity }) => {
                 <p className='activity-nav__card__title'>{title}</p>
                 <ReactStars
                 count={5}
+                size='20'
                 value={rating}
                 char="&hearts;"
                 color1='#F3DAC3'

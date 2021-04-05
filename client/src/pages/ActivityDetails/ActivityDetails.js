@@ -53,7 +53,7 @@ const ActivityDetails = (props) => {
                 <p className='activity__card__description'>{description}</p>
                 <a href={knowMore} target='_blank' className='activity__card__link'>Know more</a>
                 {addedToBucket ? 
-                <Link to='/mybucket'>View in Bucket</Link> : 
+                <Link to='/mybucket' className='activity__card__route'>View in Bucket</Link> : 
                 <Button
                 className='activity__card__button'
                 text='+ Add to my bucket'

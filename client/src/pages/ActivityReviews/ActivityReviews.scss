@@ -55,5 +55,13 @@
             margin-top: $mob-margin-y-5;
             @include mob-h2;
         }
+
+        &__route {
+            @include flex-row;
+            justify-content: center;
+            @include mob-h2;
+            @include bold;
+            color: $accent-color;
+        }
     }
 }

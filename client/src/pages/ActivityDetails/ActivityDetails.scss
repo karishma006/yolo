@@ -65,6 +65,12 @@
             margin-top: 2.1875rem;
             margin-bottom: 2rem;
         }
+
+        &__route {
+            @include mob-h2;
+            color: $accent-color;
+            @include bold;
+        }
     }
 
     &__wrapper {

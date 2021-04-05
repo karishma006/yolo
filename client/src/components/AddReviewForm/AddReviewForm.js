@@ -24,6 +24,7 @@ const AddReviewForm = ({ category }) => {
                         <label className='add-review__form__label'>Rate the activity</label>
                         {category && <ReactStars
                         count={5}
+                        size='20'
                         char="&hearts;"
                         color1='#F3DAC3'
                         color2={categories[category]}/>}

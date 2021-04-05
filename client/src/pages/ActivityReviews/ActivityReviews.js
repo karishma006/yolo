@@ -10,6 +10,7 @@ import AddReviewForm from '../../components/AddReviewForm/AddReviewForm';
 
 const ActivityReviews = (props) => {
     const [activity, setActivity] = useState({});
+    const [addedToBucket, setAddedToBucket] = useState(false);
     const { activityId } = props.match.params;
 
     useEffect(() => {
@@ -20,7 +21,7 @@ const ActivityReviews = (props) => {
         });
     }, []);  
 
-    const { id, category, title, reviews } = activity;
+    const { id, category, title, image, reviews } = activity;
     const history = useHistory();
 
     const addToBucket = (event) => {
@@ -30,12 +31,15 @@ const ActivityReviews = (props) => {
             activityId: id,
             category: category,
             title: title,
+            image: image,
+            reviews: reviews,
         };
 
         axios
         .post(`${API_URL}/mybucket/activities`, userActivity)
         .then(response => {
             console.log(response);
+            setAddedToBucket(true);
         });
     };
 
@@ -48,10 +52,12 @@ const ActivityReviews = (props) => {
                 <h3 className='reviews__title'>{title}</h3>
             </div>
             <article className='reviews__card'>
+            {addedToBucket ? 
+                <Link to='/mybucket' className='reviews__card__route'>View in Bucket</Link> : 
                 <Button
                 className='reviews__card__button'
                 text='+ Add to my bucket'
-                onClick={addToBucket}/>
+                onClick={addToBucket}/>}
                 <AddReviewForm
                 category={category}/>
                 <h3 className='reviews__card__heading'>Reviews</h3>
