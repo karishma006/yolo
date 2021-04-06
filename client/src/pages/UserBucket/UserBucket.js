@@ -71,8 +71,7 @@ class UserBucket extends Component {
 
         axios
         .delete(`${API_URL}/mybucket/activities/${id}`)
-        .then(response => {
-            console.log(response);
+        .then(_response => {
             const updatedUserActivities = this.deleteActivity(id);
 
             this.setState({
@@ -81,8 +80,6 @@ class UserBucket extends Component {
 
             this.calculateProgress();
         });
-
-        console.log(id);
     };
 
     markDoneActivity = (id) => {
@@ -97,8 +94,7 @@ class UserBucket extends Component {
 
         axios
         .put(`${API_URL}/mybucket/activities/${id}`)
-        .then(response => {
-            console.log(response);
+        .then(_response => {
             const newUserActivities = this.markDoneActivity(id);
 
             this.setState({
@@ -115,7 +111,6 @@ class UserBucket extends Component {
         axios
         .get(`${API_URL}/mybucket/activities/random`)
         .then(response => {
-            console.log(response)
             this.props.history.push(`/activities/${response.data.id}`);
         });
     };

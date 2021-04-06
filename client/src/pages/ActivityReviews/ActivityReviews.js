@@ -37,8 +37,7 @@ const ActivityReviews = (props) => {
 
         axios
         .post(`${API_URL}/mybucket/activities`, userActivity)
-        .then(response => {
-            console.log(response);
+        .then(_response => {
             setAddedToBucket(true);
         });
     };
