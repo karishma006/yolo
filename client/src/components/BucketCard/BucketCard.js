@@ -22,7 +22,7 @@ const BucketCard = ({ activity, handleDelete, handleDone }) => {
             <img className='bucket-list__card__image' src={image} alt={title}/>
             <div className='bucket-list__card__right'> 
                 {!done && <button className='bucket-list__card__link' onClick={(event) => handleDelete(event, id)}>
-                    <img src={removeIcons[category]} className='bucket-list__card__icon'/>
+                    <img src={removeIcons[category]} alt='remove' className='bucket-list__card__icon'/>
                 </button>}
                 <p className={`${done ? 'bucket-list__card__title--done' : 'bucket-list__card__title'}`}>{title}</p>
                 {done ? 

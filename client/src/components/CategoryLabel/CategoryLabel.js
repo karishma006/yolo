@@ -16,12 +16,12 @@ const icons = {
 const CategoryLabel = ({ category, filterOnClick, filteredCategories }) => {
     return (
         <>
-            <a className={`categories__card ${filteredCategories[category] ? 'categories__card--active' : ''}`} href='#' onClick={event => filterOnClick(category, event)}>
+            <article className={`categories__card ${filteredCategories[category] ? 'categories__card--active' : ''}`} onClick={event => filterOnClick(category, event)}>
                 <div className={`categories__circle categories__circle--category-${category}`}>
                     <img src={icons[category]} alt={category}/>
                 </div>
                 <p className='categories__label'>{category}</p>  
-            </a>
+            </article>
         </>
     );
 };

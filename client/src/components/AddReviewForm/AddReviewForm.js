@@ -2,15 +2,8 @@ import { useState } from 'react';
 import ReactStars from 'react-rating-stars-component';
 import UserImage from '../../assets/images/user-0.jpg';
 import Button from '../../components/Button/Button';
+import { categoryColors } from '../../utils';
 import './AddReviewForm.scss';
-
-const categories = {
-    'intelligence': '#347DA2',
-    'creativity': '#644C8A',
-    'fun': '#C44978',
-    'adventure': '#389E95',
-    'fitness': '#DC5349',
-};
 
 const AddReviewForm = ({ category, addReview }) => {
     const [rating, setRating] = useState(0);
@@ -18,25 +11,25 @@ const AddReviewForm = ({ category, addReview }) => {
 
     const ratingChanged = (newRating) => {
         setRating(newRating);
-    }
+    };
 
     const contentChanged = (event) => {
         setContent(event.target.value);
-    }
+    };
 
     const isFormValid = () => {
         if ((rating > 0 && rating <= 5) || content !== '' ) {
             return true;
         } else {
             return false;
-        }
-    }
+        };
+    };
 
     return (
         <section className='add-review'>
             <h3 className='add-review__heading'>Leave a Review</h3>
             <form className='add-review__form' onSubmit={addReview}>
-                <img src={UserImage} className='add-review__form__image' alt='user-image'/>
+                <img src={UserImage} className='add-review__form__image' alt='Jenny Smith'/>
                 <div className='add-review__form__container'>
                     <div className='add-review__form__wrapper'>
                         <label className='add-review__form__label'>Rate the activity</label>
@@ -46,7 +39,7 @@ const AddReviewForm = ({ category, addReview }) => {
                         size={20}
                         char="&hearts;"
                         color='#F3DAC3'
-                        activeColor={categories[category]}
+                        activeColor={categoryColors[category]}
                         onChange={ratingChanged}/>}
                     </div>
                     <div className='add-review__form__wrapper'>

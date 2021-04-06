@@ -30,7 +30,6 @@ class UserBucket extends Component {
             const categoryActivitiesCount = categoryActivities.length;
             const categoryActivitiesDone = categoryActivities.reduce(countDone, 0);
             const categoryPercentageDone = categoryActivitiesDone / categoryActivitiesCount * 100;
-            console.log(categoryActivitiesDone, categoryPercentageDone)
 
             progressClone[category] = {
                 total: categoryActivitiesCount,
@@ -41,7 +40,7 @@ class UserBucket extends Component {
 
         this.setState({
             progress: progressClone
-        })
+        });
     };
 
     filterActivities = (categories) => this.state.userActivities.filter(activity => {
@@ -127,13 +126,17 @@ class UserBucket extends Component {
         };
 
         const { userActivities } = this.state;
-        console.log(userActivities);
 
         return (
             <>
             <Header/>
             <main className='profile'>
-                <img src={UserImage} alt='user-image' className='profile__image'/>
+                <img src={UserImage} alt='Jen Smith' className='profile__image'/>
+                <Button
+                className='bucket-list__button'
+                text='CHALLENGE ME!'
+                onClick={this.handleChallenge}/>
+                <p className='bucket-list__heading'>My Progress</p>
                 <ul className='bucket-list__categories'>
                     {categories.map((category, i) => (
                         <li key={i} className='bucket-list__category-bar'>
@@ -143,14 +146,8 @@ class UserBucket extends Component {
                         </li>
                     ))}
                 </ul>
-                <Button
-                className='bucket-list__button'
-                text='CHALLENGE ME!'
-                onClick={this.handleChallenge}/>
                 <section className='bucket-list'>
-                    <header className='bucket-list__header'>
-                        <p className='bucket-list__heading'>My Bucket</p>
-                    </header>
+                    <p className='bucket-list__heading'>My Bucket</p>
                     <ul className='bucket-list__list'>
                     {userActivities.map(activity => (
                         <li 

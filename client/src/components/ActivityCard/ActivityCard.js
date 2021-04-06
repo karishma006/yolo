@@ -1,13 +1,6 @@
 import ReactStars from 'react-rating-stars-component';
+import { categoryColors } from '../../utils';
 import './ActivityCard.scss';
-
-const categories = {
-    'intelligence': '#347DA2',
-    'creativity': '#644C8A',
-    'fun': '#C44978',
-    'adventure': '#389E95',
-    'fitness': '#DC5349',
-};
 
 const ActivityCard = ({ activity }) => {
     const { category, image, title, rating, bucketed, completed } = activity;
@@ -23,7 +16,7 @@ const ActivityCard = ({ activity }) => {
                 value={parseInt(rating)}
                 char="&hearts;"
                 color='#F3DAC3'
-                activeColor={categories[category]}
+                activeColor={categoryColors[category]}
                 edit={false}/>
                 <div className='activity-nav__card__wrapper'>
                     <p className='activity-nav__card__stats'>{bucketed}</p>

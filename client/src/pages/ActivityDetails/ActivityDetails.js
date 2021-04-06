@@ -44,13 +44,13 @@ const ActivityDetails = (props) => {
 
     return (
         <main className={`activity activity--category-${category}`}>
-            <a href='#' onClick={() => history.goBack()} className='activity__back-icon'>
+            <button href='#' onClick={() => history.goBack()} className='activity__back-icon'>
                 <img src={BackIcon} alt='Back Icon'/>
-            </a>
+            </button>
             <article className='activity__card'>
                 <h3 className='activity__card__title'>{title}</h3>
                 <p className='activity__card__description'>{description}</p>
-                <a href={knowMore} target='_blank' className='activity__card__link'>Know more</a>
+                <a href={knowMore} target='_blank' rel='noreferrer' className='activity__card__link'>Know more</a>
                 {addedToBucket ? 
                 <Link to='/mybucket' className='activity__card__route'>View in Bucket</Link> : 
                 <Button

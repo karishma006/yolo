@@ -32,6 +32,13 @@
     &__back-icon {
         align-self: flex-start;
         margin-bottom: auto;
+        border: none;
+        background: none;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
     }
 
     &__card {

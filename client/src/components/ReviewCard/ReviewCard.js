@@ -1,15 +1,8 @@
 import { useState } from 'react';
 import ReactStars from 'react-rating-stars-component';
 import Button from '../Button/Button';
+import { categoryColors } from '../../utils';
 import './ReviewCard.scss';
-
-const categories = {
-    'intelligence': '#347DA2',
-    'creativity': '#644C8A',
-    'fun': '#C44978',
-    'adventure': '#389E95',
-    'fitness': '#DC5349',
-};
 
 const ReviewCard = ({ review, category }) => {
 
@@ -35,7 +28,7 @@ const ReviewCard = ({ review, category }) => {
 
     return (
         <article className='review__card'>
-            <img className='review__card__image' src={userImage} alt='user image'/>
+            <img className='review__card__image' src={userImage} alt='user'/>
             <div className='review__card__wrapper'>
                 <div className='review__card__header'>
                     <p className='review__card__name'>{name}</p>
@@ -47,7 +40,7 @@ const ReviewCard = ({ review, category }) => {
                 value={parseInt(rating)}
                 char="&hearts;"
                 color='#F3DAC3'
-                activeColor={categories[category]}
+                activeColor={categoryColors[category]}
                 edit={false}/>
                 <p className='review__card__content'>{content}</p>
                 <p className='review__card__thumbs'>{thumbs} people found this helpful</p>

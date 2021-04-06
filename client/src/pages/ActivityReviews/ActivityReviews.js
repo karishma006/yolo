@@ -61,9 +61,9 @@ const ActivityReviews = (props) => {
     return (
         <main className={`reviews reviews--category-${category}`}>
             <div className='reviews__header'>
-                <a href='#' onClick={() => history.goBack()} className='reviews__back-icon'>
+                <button onClick={() => history.goBack()} className='reviews__back-icon'>
                     <img src={BackIcon} alt='Back Icon'/>
-                </a>
+                </button>
                 <h3 className='reviews__title'>{title}</h3>
             </div>
             <article className='reviews__card'>
