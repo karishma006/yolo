@@ -43,6 +43,20 @@ const ActivityReviews = (props) => {
         });
     };
 
+    const addReview = (event) => {
+        event.preventDefault();
+        const newReview = {
+            rating: event.target.elements.rating.value,
+            content: event.target.elements.content.value,
+        };
+
+        axios
+        .post(`${API_URL}/activities/${id}/reviews`, newReview)
+        .then(response => {
+            setActivity(response.data);
+        });
+    };
+
     return (
         <main className={`reviews reviews--category-${category}`}>
             <div className='reviews__header'>
@@ -59,7 +73,8 @@ const ActivityReviews = (props) => {
                 text='+ Add to my bucket'
                 onClick={addToBucket}/>}
                 <AddReviewForm
-                category={category}/>
+                category={category}
+                addReview={addReview}/>
                 <h3 className='reviews__card__heading'>Reviews</h3>
                 {reviews && reviews.map(review => 
                     <ReviewCard

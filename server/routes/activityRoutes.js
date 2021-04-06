@@ -36,8 +36,12 @@ router.post('/activities/:activityId/reviews', (request, response) => {
     
     const newReview = {
         id : uniqid(),
+        name: 'Jenny Smith',
         rating : rating,
-        content : content, 
+        content : content,
+        userImage: 'http://localhost:8080/public/user-0.jpg',
+        timestamp: new Date(),
+        thumbs: 0,
     };
 
     const activities = readActivities();
@@ -45,7 +49,7 @@ router.post('/activities/:activityId/reviews', (request, response) => {
     activity.reviews.unshift(newReview);
     fs.writeFileSync('./data/activities.json', JSON.stringify(activities));
 
-    response.status(200).json(reviews);
+    response.status(200).json(activity);
 });
 
 module.exports = router;

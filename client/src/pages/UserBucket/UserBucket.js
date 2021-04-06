@@ -14,6 +14,13 @@ import './UserBucket.scss';
 class UserBucket extends Component {
     state = {
         userActivities: [],
+        progress: {
+            'intelligence': { total: 0, done: 0, percentage: 0 },
+            'creativity': { total: 0, done: 0, percentage: 0 },
+            'fun': { total: 0, done: 0, percentage: 0 },
+            'adventure': { total: 0, done: 0, percentage: 0 },
+            'fitness': { total: 0, done: 0, percentage: 0 },
+        }
     };
 
     componentDidMount() {

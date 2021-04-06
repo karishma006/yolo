@@ -45,7 +45,8 @@ const ReviewCard = ({ review, category }) => {
                 value={rating}
                 char="&hearts;"
                 color1='#F3DAC3'
-                color2={categories[category]}/>
+                color2={categories[category]}
+                edit={false}/>
                 <p className='review__card__content'>{content}</p>
                 <p className='review__card__thumbs'>{thumbs} people found this helpful</p>
                 <div className='review__card__footer'>

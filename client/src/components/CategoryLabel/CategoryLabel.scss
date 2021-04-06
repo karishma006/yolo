@@ -9,8 +9,17 @@
         text-decoration: none;
         width: 3.75rem;
 
-        &--active {
+        &:after {
+            content: '';
+            display: block;
+            width: 0%;
+            padding-top: 0.25rem;
             border-bottom: 0.25rem solid $accent-color;
+            transition: 0.25s;
+        }
+
+        &--active:after, &:hover:after {
+            width: 100%;
         }
     }
 
