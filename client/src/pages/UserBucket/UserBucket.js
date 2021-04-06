@@ -15,13 +15,40 @@ class UserBucket extends Component {
     state = {
         userActivities: [],
         progress: {
-            'intelligence': { total: 0, done: 0, percentage: 0 },
-            'creativity': { total: 0, done: 0, percentage: 0 },
-            'fun': { total: 0, done: 0, percentage: 0 },
-            'adventure': { total: 0, done: 0, percentage: 0 },
-            'fitness': { total: 0, done: 0, percentage: 0 },
+            intelligence: { total: 0, done: 0, percentage: 0 },
+            creativity: { total: 0, done: 0, percentage: 0 },
+            fun: { total: 0, done: 0, percentage: 0 },
+            adventure: { total: 0, done: 0, percentage: 0 },
+            fitness: { total: 0, done: 0, percentage: 0 },
         }
     };
+
+    calculateProgress = () => {
+        const countDone = (accu, activity) => activity.done ? ++accu : accu;
+        const progressClone = JSON.parse(JSON.stringify(this.state.progress));
+
+        Object.keys(progressClone).forEach(category => {
+            const categoryActivities = this.filterActivities([category]);
+            const categoryActivitiesCount = categoryActivities.length;
+            const categoryActivitiesDone = categoryActivities.reduce(countDone, 0);
+            const categoryPercentageDone = categoryActivitiesDone / categoryActivitiesCount * 100;
+            console.log(categoryActivitiesDone, categoryPercentageDone)
+
+            progressClone[category] = {
+                total: categoryActivitiesCount,
+                done: categoryActivitiesDone,
+                percentage: categoryPercentageDone
+            }
+        });
+
+        this.setState({
+            progress: progressClone
+        })
+    };
+
+    filterActivities = (categories) => this.state.userActivities.filter(activity => {
+        return categories.includes(activity.category.toLowerCase());
+    });
 
     componentDidMount() {
         axios
@@ -30,6 +57,7 @@ class UserBucket extends Component {
             this.setState({
                 userActivities: response.data,
             });
+            this.calculateProgress();
         });
     };
 
@@ -53,6 +81,8 @@ class UserBucket extends Component {
             this.setState({
                 userActivities: updatedUserActivities,
             });
+
+            this.calculateProgress();
         });
 
         console.log(id);
@@ -77,6 +107,8 @@ class UserBucket extends Component {
             this.setState({
                 userActivities: newUserActivities,
             });
+
+            this.calculateProgress();
         });
     };
 
@@ -108,7 +140,8 @@ class UserBucket extends Component {
                     {categories.map((category, i) => (
                         <li key={i} className='bucket-list__category-bar'>
                             <CategoryBar
-                            category={category}/>
+                            category={category}
+                            percentage={this.state.progress[category]['percentage']}/>
                         </li>
                     ))}
                 </ul>

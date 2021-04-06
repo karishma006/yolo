@@ -32,5 +32,6 @@
     &:hover {
         background-color: $hover-color;
         color: $primary-color-2;
+        border: 0.0625rem solid $hover-color;
     }
 }

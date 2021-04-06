@@ -45,9 +45,9 @@ const ActivityDetails = (props) => {
 
     return (
         <main className={`activity activity--category-${category}`}>
-            <Link onClick={() => history.goBack()} className='activity__back-icon'>
+            <a href='#' onClick={() => history.goBack()} className='activity__back-icon'>
                 <img src={BackIcon} alt='Back Icon'/>
-            </Link>
+            </a>
             <article className='activity__card'>
                 <h3 className='activity__card__title'>{title}</h3>
                 <p className='activity__card__description'>{description}</p>

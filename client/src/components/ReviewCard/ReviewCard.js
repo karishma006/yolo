@@ -1,6 +1,6 @@
 import './ReviewCard.scss';
 import Button from '../Button/Button';
-import ReactStars from 'react-stars';
+import ReactStars from 'react-rating-stars-component';
 import { useState, useEffect } from 'react';
 
 const categories = {
@@ -14,6 +14,7 @@ const categories = {
 const ReviewCard = ({ review, category }) => {
 
     const [thumbs, setThumbs] = useState(review.thumbs);
+    const [markedHelpful, setMarkedHelpful] = useState(false);
 
     const convertTimestamp = (timestamp) => {
         const newTimestamp = new Date(timestamp);
@@ -27,6 +28,7 @@ const ReviewCard = ({ review, category }) => {
     const addThumbs = (event) => {
         event.preventDefault();
         setThumbs(review.thumbs+1);
+        setMarkedHelpful(true);
     };
 
     const { name, userImage, timestamp, rating, content } = review;
@@ -41,19 +43,21 @@ const ReviewCard = ({ review, category }) => {
                 </div>
                 <ReactStars
                 count={5}
-                size='20'
-                value={rating}
+                size={20}
+                value={parseInt(rating)}
                 char="&hearts;"
-                color1='#F3DAC3'
-                color2={categories[category]}
+                color='#F3DAC3'
+                activeColor={categories[category]}
                 edit={false}/>
                 <p className='review__card__content'>{content}</p>
                 <p className='review__card__thumbs'>{thumbs} people found this helpful</p>
                 <div className='review__card__footer'>
+                {markedHelpful ? 
+                    <p className='review__card__marked'>Marked as Helpful</p> : 
                     <Button
                     className='review__card__button'
                     text='Helpful'
-                    onClick={addThumbs}/>
+                    onClick={addThumbs}/>}
                 </div>
             </div>
         </article>

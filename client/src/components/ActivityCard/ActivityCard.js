@@ -1,5 +1,5 @@
 import './ActivityCard.scss';
-import ReactStars from 'react-stars';
+import ReactStars from 'react-rating-stars-component';
 
 const categories = {
     'intelligence': '#347DA2',
@@ -19,11 +19,12 @@ const ActivityCard = ({ activity }) => {
                 <p className='activity-nav__card__title'>{title}</p>
                 <ReactStars
                 count={5}
-                size='20'
-                value={rating}
+                size={20}
+                value={parseInt(rating)}
                 char="&hearts;"
-                color1='#F3DAC3'
-                color2={categories[category]}/>
+                color='#F3DAC3'
+                activeColor={categories[category]}
+                edit={false}/>
                 <div className='activity-nav__card__wrapper'>
                     <p className='activity-nav__card__stats'>{bucketed}</p>
                     <p className='activity-nav__card__stats activity-nav__card__stats--text'>have bucketed this</p>

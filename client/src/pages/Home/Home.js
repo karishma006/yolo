@@ -32,7 +32,7 @@ class Home extends Component {
         const categoriesToFilter = Object.keys(filteredCategoriesClone).filter(key => filteredCategoriesClone[key] === true);
         const newActivities = newShowAllCategory ? this.state.allActivities : this.filterActivities(categoriesToFilter);
 
-        if(Object.values(filteredCategoriesClone).every(Boolean)) {
+        if (Object.values(filteredCategoriesClone).every(Boolean)) {
             newShowAllCategory = !newShowAllCategory;
             Object.keys(filteredCategoriesClone).forEach(key => filteredCategoriesClone[key] = false);
         };

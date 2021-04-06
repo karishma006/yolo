@@ -15,7 +15,7 @@ const categories = {
     'fitness': { icon: Creativity, color: '#DC5349' },
 };
 
-const CategoryBar = ({ category }) => {
+const CategoryBar = ({ category, percentage }) => {
     return (
         <article className='category-bar'>   
             <div className='category-bar__element'>
@@ -25,7 +25,7 @@ const CategoryBar = ({ category }) => {
                 <div className='category-bar__wrapper'>
                     <p className='category-bar__label'>{category}</p>
                     <ProgressBar
-                    completed={80}
+                    completed={percentage}
                     baseBgColor='#F3DAC3'
                     bgColor={categories[category]['color']}
                     height='0.5rem'
