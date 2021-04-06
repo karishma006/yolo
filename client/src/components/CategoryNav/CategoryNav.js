@@ -1,5 +1,5 @@
-import './CategoryNav.scss';
 import CategoryLabel from '../CategoryLabel/CategoryLabel';
+import './CategoryNav.scss';
 
 const CategoryNav = ({ categories, filterOnClick, filteredCategories }) => {
     return (

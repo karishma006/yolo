@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import axios from 'axios';
-
 import Header from '../../components/Header/Header';
 import UserImage from '../../assets/images/user-0.jpg';
 import { API_URL } from '../../utils';

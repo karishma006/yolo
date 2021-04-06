@@ -48,6 +48,10 @@
             border: 0;
             background-color: $primary-color-2;
             margin-left: auto;
+
+            &:focus {
+                outline: none;
+            }
         }
 
         &__icon {

@@ -1,5 +1,5 @@
-import './ActivityCard.scss';
 import ReactStars from 'react-rating-stars-component';
+import './ActivityCard.scss';
 
 const categories = {
     'intelligence': '#347DA2',

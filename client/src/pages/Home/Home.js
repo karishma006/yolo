@@ -1,4 +1,3 @@
-import './Home.scss';
 import { Component } from 'react';
 import axios from 'axios';
 import { API_URL } from '../../utils';
@@ -7,6 +6,7 @@ import Header from '../../components/Header/Header';
 import SearchField from '../../components/SearchField/SearchField';
 import CategoryNav from '../../components/CategoryNav/CategoryNav';
 import ActivityNav from '../../components/ActivityNav/ActivityNav';
+import './Home.scss';
 
 class Home extends Component {
     state = {

@@ -1,10 +1,10 @@
-import './BucketCard.scss';
+import { Link } from 'react-router-dom';
 import RemoveIconIntelligence from '../../assets/icons/intelligence-remove.svg';
 import RemoveIconCreativity from '../../assets/icons/creativity-remove.svg';
 import RemoveIconFun from '../../assets/icons/fun-remove.svg';
 import RemoveIconAdventure from '../../assets/icons/adventure-remove.svg';
 import RemoveIconFitness from '../../assets/icons/fitness-remove.svg';
-import { Link } from 'react-router-dom';
+import './BucketCard.scss';
 
 const removeIcons = {
     'intelligence': RemoveIconIntelligence,

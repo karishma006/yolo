@@ -1,7 +1,7 @@
-import './ReviewCard.scss';
-import Button from '../Button/Button';
-import ReactStars from 'react-rating-stars-component';
 import { useState } from 'react';
+import ReactStars from 'react-rating-stars-component';
+import Button from '../Button/Button';
+import './ReviewCard.scss';
 
 const categories = {
     'intelligence': '#347DA2',

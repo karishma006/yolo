@@ -1,16 +1,16 @@
+import IntelligenceIcon from '../../assets/icons/intelligence.svg';
+import CreativityIcon from '../../assets/icons/creativity.svg';
+import FunIcon from '../../assets/icons/fun.svg';
+import AdventureIcon from '../../assets/icons/adventure.svg';
+import FitnessIcon from '../../assets/icons/fitness.svg';
 import './CategoryLabel.scss';
-import Intelligence from '../../assets/icons/category-1.svg';
-import Fitness from '../../assets/icons/category-2.svg';
-import Fun from '../../assets/icons/category-3.svg';
-import Adventure from '../../assets/icons/category-4.svg';
-import Creativity from '../../assets/icons/category-5.svg';
 
 const icons = {
-    'intelligence': Intelligence,
-    'fitness': Fitness,
-    'fun': Fun,
-    'adventure': Adventure,
-    'creativity': Creativity,
+    'intelligence': IntelligenceIcon,
+    'creativity': CreativityIcon,
+    'fun': FunIcon,
+    'adventure': AdventureIcon,
+    'fitness': FitnessIcon,
 };
 
 const CategoryLabel = ({ category, filterOnClick, filteredCategories }) => {

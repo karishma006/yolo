@@ -1,12 +1,12 @@
-import './ActivityReviews.scss';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Link, useHistory } from 'react-router-dom';
+import axios from 'axios';
 import { API_URL } from '../../utils';
 import BackIcon from '../../assets/icons/back.svg';
 import ReviewCard from '../../components/ReviewCard/ReviewCard';
 import Button from '../../components/Button/Button';
 import AddReviewForm from '../../components/AddReviewForm/AddReviewForm';
+import './ActivityReviews.scss';
 
 const ActivityReviews = (props) => {
     const [activity, setActivity] = useState({});

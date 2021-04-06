@@ -1,6 +1,6 @@
-import './ActivityNav.scss';
 import { Link } from 'react-router-dom';
 import ActivityCard from '../ActivityCard/ActivityCard';
+import './ActivityNav.scss';
 
 const ActivityNav = ({ activities }) => {
     return (

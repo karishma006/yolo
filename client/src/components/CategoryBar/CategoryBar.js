@@ -1,18 +1,17 @@
 import ProgressBar from '@ramonak/react-progress-bar';
-
-import Intelligence from '../../assets/icons/category-1.svg';
-import Fitness from '../../assets/icons/category-2.svg';
-import Fun from '../../assets/icons/category-3.svg';
-import Adventure from '../../assets/icons/category-4.svg';
-import Creativity from '../../assets/icons/category-5.svg';
+import IntelligenceIcon from '../../assets/icons/intelligence.svg';
+import CreativityIcon from '../../assets/icons/creativity.svg';
+import FunIcon from '../../assets/icons/fun.svg';
+import AdventureIcon from '../../assets/icons/adventure.svg';
+import FitnessIcon from '../../assets/icons/fitness.svg';
 import './CategoryBar.scss';
 
 const categories = {
-    'intelligence': { icon: Intelligence, color: '#347DA2' },
-    'creativity': { icon: Creativity, color: '#644C8A' },
-    'fun': { icon: Fun, color: '#C44978' },
-    'adventure': { icon: Adventure, color: '#389E95' },
-    'fitness': { icon: Fitness, color: '#DC5349' },
+    'intelligence': { icon: IntelligenceIcon, color: '#347DA2' },
+    'creativity': { icon: CreativityIcon, color: '#644C8A' },
+    'fun': { icon: FunIcon, color: '#C44978' },
+    'adventure': { icon: AdventureIcon, color: '#389E95' },
+    'fitness': { icon: FitnessIcon, color: '#DC5349' },
 };
 
 const CategoryBar = ({ category, percentage }) => {

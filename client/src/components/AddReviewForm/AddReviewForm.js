@@ -1,8 +1,8 @@
-import './AddReviewForm.scss';
+import { useState } from 'react';
+import ReactStars from 'react-rating-stars-component';
 import UserImage from '../../assets/images/user-0.jpg';
 import Button from '../../components/Button/Button';
-import ReactStars from 'react-rating-stars-component';
-import { useState } from 'react';
+import './AddReviewForm.scss';
 
 const categories = {
     'intelligence': '#347DA2',
@@ -22,6 +22,14 @@ const AddReviewForm = ({ category, addReview }) => {
 
     const contentChanged = (event) => {
         setContent(event.target.value);
+    }
+
+    const isFormValid = () => {
+        if ((rating > 0 && rating <= 5) || content !== '' ) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     return (
@@ -47,7 +55,8 @@ const AddReviewForm = ({ category, addReview }) => {
                     </div>
                     <Button
                     className='add-review__form__button'
-                    text='Post'/>
+                    text='Post'
+                    disabled={!isFormValid()}/>
                 </div>
                 <input hidden type='integer' min='0' max='5' name='rating' value={parseInt(rating)} onChange={() => {}}/>
             </form>

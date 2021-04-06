@@ -1,12 +1,11 @@
-import './ActivityDetails.scss';
 import { useState, useEffect } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
-
 import { API_URL } from '../../utils';
 import BackIcon from '../../assets/icons/back.svg';
 import DownIcon from '../../assets/icons/down.svg';
-import { Link, useHistory } from 'react-router-dom';
 import Button from '../../components/Button/Button';
+import './ActivityDetails.scss';
 
 const ActivityDetails = (props) => {
     const [activity, setActivity] = useState({});
