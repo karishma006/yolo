@@ -28,4 +28,9 @@
     color: $primary-color-1;
     border: 0.0625rem solid $primary-color-1;
     margin-left: auto;
+
+    &:hover {
+        background-color: $primary-color-1;
+        color: $primary-color-2;
+    }
 }

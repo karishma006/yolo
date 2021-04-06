@@ -15,15 +15,21 @@ writeUserActivities = (userActivities) => {
     fs.writeFileSync('./data/userActivities.json', userActivitiesData);
 };
 
+const readActivities = () => {
+    const activitiesData = fs.readFileSync('./data/activities.json');
+    const parsedData = JSON.parse(activitiesData);
+    return parsedData;
+};
+
 router.get('/mybucket/activities', (_request, response) => {
     const userActivities = readUserActivities();
     response.status(200).json(userActivities);
 });
 
 router.get('/mybucket/activities/random', (_request, response) => {
-    const userActivities = readUserActivities();
-    const randomActivity = userActivities[Math.floor(Math.random()*userActivities.length)];
-    response.status(200).json(randomActivity.activityId);
+    const activities = readActivities();
+    const randomActivity = activities[Math.floor(Math.random()*activities.length)];
+    response.status(200).json(randomActivity);
 });
 
 router.post('/mybucket/activities', (request, response) => {

@@ -8,8 +8,8 @@
     align-items: center;
 
     &__image {
-        width: 5rem;
-        height: 5rem;
+        width: 10rem;
+        height: 10rem;
         @include rounded;
         margin-top: $mob-margin-y-3;
         margin-bottom: $mob-margin-y-6;

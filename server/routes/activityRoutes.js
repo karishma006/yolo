@@ -4,8 +4,8 @@ const fs = require('fs');
 const uniqid = require('uniqid');
 
 const readActivities = () => {
-    const videosData = fs.readFileSync('./data/activities.json');
-    const parsedData = JSON.parse(videosData);
+    const activitiesData = fs.readFileSync('./data/activities.json');
+    const parsedData = JSON.parse(activitiesData);
     return parsedData;
 };
 

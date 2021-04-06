@@ -1,6 +1,7 @@
 import './ReviewCard.scss';
 import Button from '../Button/Button';
 import ReactStars from 'react-stars';
+import { useState, useEffect } from 'react';
 
 const categories = {
     'intelligence': '#347DA2',
@@ -12,6 +13,8 @@ const categories = {
 
 const ReviewCard = ({ review, category }) => {
 
+    const [thumbs, setThumbs] = useState(review.thumbs);
+
     const convertTimestamp = (timestamp) => {
         const newTimestamp = new Date(timestamp);
         const date = newTimestamp.getDate();
@@ -21,7 +24,12 @@ const ReviewCard = ({ review, category }) => {
         return fullDate;
     };
 
-    const { name, userImage, timestamp, rating, content, thumbs } = review;
+    const addThumbs = (event) => {
+        event.preventDefault();
+        setThumbs(review.thumbs+1);
+    };
+
+    const { name, userImage, timestamp, rating, content } = review;
 
     return (
         <article className='review__card'>
@@ -43,7 +51,8 @@ const ReviewCard = ({ review, category }) => {
                 <div className='review__card__footer'>
                     <Button
                     className='review__card__button'
-                    text='Helpful'/>
+                    text='Helpful'
+                    onClick={addThumbs}/>
                 </div>
             </div>
         </article>

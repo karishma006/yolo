@@ -16,13 +16,13 @@
         margin-top: $mob-margin-y-5;
 
         &__image {
-            width: 3rem;
-            height: 3rem;
+            width: 4rem;
+            height: 4rem;
             @include rounded;
         }
 
         &__container {
-            width: calc(100% - 3rem);
+            width: calc(100% - 4rem);
             @include flex-column;
             padding-left: $mob-margin-x;
         }

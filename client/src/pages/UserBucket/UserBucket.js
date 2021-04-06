@@ -79,7 +79,8 @@ class UserBucket extends Component {
         axios
         .get(`${API_URL}/mybucket/activities/random`)
         .then(response => {
-            this.props.history.push(`/activities/${response.data}`);
+            console.log(response)
+            this.props.history.push(`/activities/${response.data.id}`);
         });
     };
 

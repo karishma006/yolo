@@ -10,15 +10,15 @@
         border-bottom: 0.0625rem solid $primary-color-4;
 
         &__image {
-            width: 3rem;
-            height: 3rem;
+            width: 4rem;
+            height: 4rem;
             @include rounded;
             object-fit: cover;
         }
 
         &__wrapper {
             margin-left: $mob-margin-x;
-            width: calc(100% - 3rem);
+            width: calc(100% - 4rem);
         }
 
         &__header {
