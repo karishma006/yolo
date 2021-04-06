@@ -24,27 +24,22 @@
 
         &--category-intelligence {
             @include background-category-1;
-            // margin: 0 0.5rem 0 0.5rem;
         }
 
         &--category-creativity {
             @include background-category-2;
-            // margin: 0 0.5rem;
         }
 
         &--category-fun {
             @include background-category-3;
-            // margin: 0 0.5rem;
         }
 
         &--category-adventure {
             @include background-category-4;
-            // margin: 0 0.5rem;
         }
 
         &--category-fitness {
             @include background-category-5;
-            // margin: 0 0.5rem 0 0.5rem;
         }
     }
 
@@ -58,6 +53,5 @@
         margin-top: $mob-margin-y-3;
         text-transform: capitalize;
         color: $primary-color-1;
-        
     }
 }

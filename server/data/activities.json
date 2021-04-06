@@ -403,5 +403,205 @@
                 "timestamp": 1610318595000
             }
         ]
+    },
+    {
+        "id": "11",
+        "title": "Fly in a hot air balloon",
+        "image": "http://localhost:8080/public/activity-11.jpg",
+        "category": "fun",
+        "rating": 4.5,
+        "bucketed": "82%",
+        "completed": "73%",
+        "description": "A hot air balloon ride is both serene and peaceful. Even people who are normally afraid of heights do not tend to feel stress during hot air balloon rides. Flying in a hot air balloon is both relaxing and exciting at the same time.",
+        "knowMore": "https://www.wickersworld.co.uk/what-to-expect-on-your-first-hot-air-balloon-ride",
+        "reviews": [
+            {
+                "id": "1",
+                "userImage": "http://localhost:8080/public/user-1.jpg",
+                "name": "Annie Banks",
+                "content": "This was an experience of a lifetime! Cannot wait to do this again. Must-try for everyone!",
+                "thumbs": 456,
+                "rating": 4,
+                "timestamp": 1616625795000
+            },
+            {
+                "id": "2",
+                "userImage": "http://localhost:8080/public/user-2.jpg",
+                "name": "Robb Stark",
+                "content": "Never thought I would be able to muster the courage to do this! In the end, it was a liberating experience.",
+                "thumbs": 682,
+                "rating": 4.5,
+                "timestamp": 1612392195000
+            },
+            {
+                "id": "3",
+                "userImage": "http://localhost:8080/public/user-3.jpg",
+                "name": "Donna Paulsen",
+                "content": "I always wanted to push myself to the extreme limit and wondered how it would feel. It was truly exhilarating.",
+                "thumbs": 848,
+                "rating": 4.5,
+                "timestamp": 1610318595000
+            }
+        ]
+    },
+    {
+        "id": "12",
+        "title": "Learn a dance form",
+        "image": "http://localhost:8080/public/activity-12.jpg",
+        "category": "creativity",
+        "rating": 4.5,
+        "bucketed": "76%",
+        "completed": "57%",
+        "description": "When you dance your body releases endorphins. This is a chemical that trigger's positive energy and good vibes! It helps improve our emotional state and reduce our perception of pain. So basically, dancing is your cure for happiness!",
+        "knowMore": "https://fisfordance.com/why-does-dancing-make-you-feel-so-good",
+        "reviews": [
+            {
+                "id": "1",
+                "userImage": "http://localhost:8080/public/user-1.jpg",
+                "name": "Annie Banks",
+                "content": "This was an experience of a lifetime! Cannot wait to do this again. Must-try for everyone!",
+                "thumbs": 456,
+                "rating": 4,
+                "timestamp": 1616625795000
+            },
+            {
+                "id": "2",
+                "userImage": "http://localhost:8080/public/user-2.jpg",
+                "name": "Robb Stark",
+                "content": "Never thought I would be able to muster the courage to do this! In the end, it was a liberating experience.",
+                "thumbs": 682,
+                "rating": 4.5,
+                "timestamp": 1612392195000
+            },
+            {
+                "id": "3",
+                "userImage": "http://localhost:8080/public/user-3.jpg",
+                "name": "Donna Paulsen",
+                "content": "I always wanted to push myself to the extreme limit and wondered how it would feel. It was truly exhilarating.",
+                "thumbs": 848,
+                "rating": 4.5,
+                "timestamp": 1610318595000
+            }
+        ]
+    },
+    {
+        "id": "13",
+        "title": "Take part in eSports",
+        "image": "http://localhost:8080/public/activity-13.jpg",
+        "category": "intelligence",
+        "rating": 3.0,
+        "bucketed": "58%",
+        "completed": "43%",
+        "description": "eSports describes the world of competitive, organized video gaming. Competitors from different leagues or teams face off in the same games that are popular with at-home gamers: Ex. Fortnite, League of Legends, Counter-Strike.",
+        "knowMore": "https://www.cnn.com/2018/08/27/us/esports-what-is-video-game-professional-league-madden-trnd",
+        "reviews": [
+            {
+                "id": "1",
+                "userImage": "http://localhost:8080/public/user-1.jpg",
+                "name": "Annie Banks",
+                "content": "This was an experience of a lifetime! Cannot wait to do this again. Must-try for everyone!",
+                "thumbs": 456,
+                "rating": 4,
+                "timestamp": 1616625795000
+            },
+            {
+                "id": "2",
+                "userImage": "http://localhost:8080/public/user-2.jpg",
+                "name": "Robb Stark",
+                "content": "Never thought I would be able to muster the courage to do this! In the end, it was a liberating experience.",
+                "thumbs": 682,
+                "rating": 4.5,
+                "timestamp": 1612392195000
+            },
+            {
+                "id": "3",
+                "userImage": "http://localhost:8080/public/user-3.jpg",
+                "name": "Donna Paulsen",
+                "content": "I always wanted to push myself to the extreme limit and wondered how it would feel. It was truly exhilarating.",
+                "thumbs": 848,
+                "rating": 4.5,
+                "timestamp": 1610318595000
+            }
+        ]
+    },
+    {
+        "id": "14",
+        "title": "Take up a new watersport",
+        "image": "http://localhost:8080/public/activity-14.jpg",
+        "category": "fitness",
+        "rating": 4.0,
+        "bucketed": "79%",
+        "completed": "62%",
+        "description": "Water sports is the perfect way to cool off and exercise. Whether you’re in for an adrenaline kick with kitesurfing or flyboarding, or you prefer something more fun such as yachting or snorkeling, there’s always a perfect activity for all.",
+        "knowMore": "https://www.thetrendspotter.net/fun-water-sports-and-activities",
+        "reviews": [
+            {
+                "id": "1",
+                "userImage": "http://localhost:8080/public/user-1.jpg",
+                "name": "Annie Banks",
+                "content": "This was an experience of a lifetime! Cannot wait to do this again. Must-try for everyone!",
+                "thumbs": 456,
+                "rating": 4,
+                "timestamp": 1616625795000
+            },
+            {
+                "id": "2",
+                "userImage": "http://localhost:8080/public/user-2.jpg",
+                "name": "Robb Stark",
+                "content": "Never thought I would be able to muster the courage to do this! In the end, it was a liberating experience.",
+                "thumbs": 682,
+                "rating": 4.5,
+                "timestamp": 1612392195000
+            },
+            {
+                "id": "3",
+                "userImage": "http://localhost:8080/public/user-3.jpg",
+                "name": "Donna Paulsen",
+                "content": "I always wanted to push myself to the extreme limit and wondered how it would feel. It was truly exhilarating.",
+                "thumbs": 848,
+                "rating": 4.5,
+                "timestamp": 1610318595000
+            }
+        ]
+    },
+    {
+        "id": "15",
+        "title": "Go on a wildlife safari",
+        "image": "http://localhost:8080/public/activity-15.jpg",
+        "category": "adventure",
+        "rating": 4.5,
+        "bucketed": "87%",
+        "completed": "74%",
+        "description": "Definitions of safari still refer to the outmoded usage of the word - An expedition to observe or hunt animals in their natural habitat, especially in Africa. A trip to see, photograph or hunt wild animals in their own environment.",
+        "knowMore": "https://www.africanbudgetsafaris.com/blog/what-is-a-safari",
+        "reviews": [
+            {
+                "id": "1",
+                "userImage": "http://localhost:8080/public/user-1.jpg",
+                "name": "Annie Banks",
+                "content": "This was an experience of a lifetime! Cannot wait to do this again. Must-try for everyone!",
+                "thumbs": 456,
+                "rating": 4,
+                "timestamp": 1616625795000
+            },
+            {
+                "id": "2",
+                "userImage": "http://localhost:8080/public/user-2.jpg",
+                "name": "Robb Stark",
+                "content": "Never thought I would be able to muster the courage to do this! In the end, it was a liberating experience.",
+                "thumbs": 682,
+                "rating": 4.5,
+                "timestamp": 1612392195000
+            },
+            {
+                "id": "3",
+                "userImage": "http://localhost:8080/public/user-3.jpg",
+                "name": "Donna Paulsen",
+                "content": "I always wanted to push myself to the extreme limit and wondered how it would feel. It was truly exhilarating.",
+                "thumbs": 848,
+                "rating": 4.5,
+                "timestamp": 1610318595000
+            }
+        ]
     }
 ]
