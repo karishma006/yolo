@@ -9,10 +9,10 @@ import './CategoryBar.scss';
 
 const categories = {
     'intelligence': { icon: Intelligence, color: '#347DA2' },
-    'creativity': { icon: Fitness, color: '#644C8A' },
+    'creativity': { icon: Creativity, color: '#644C8A' },
     'fun': { icon: Fun, color: '#C44978' },
     'adventure': { icon: Adventure, color: '#389E95' },
-    'fitness': { icon: Creativity, color: '#DC5349' },
+    'fitness': { icon: Fitness, color: '#DC5349' },
 };
 
 const CategoryBar = ({ category, percentage }) => {

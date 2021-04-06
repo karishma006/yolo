@@ -55,6 +55,7 @@ const ActivityReviews = (props) => {
         .then(response => {
             setActivity(response.data);
         });
+        event.target.reset();
     };
 
     return (

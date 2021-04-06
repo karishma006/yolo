@@ -49,5 +49,12 @@
         &__footer {
             @include flex-row;
         }
+
+        &__marked {
+            @include mob-h3;
+            @include semi-bold;
+            margin-left: auto;
+            color: $accent-color;
+        }
     }
 }

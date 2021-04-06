@@ -1,7 +1,7 @@
 import './ReviewCard.scss';
 import Button from '../Button/Button';
 import ReactStars from 'react-rating-stars-component';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const categories = {
     'intelligence': '#347DA2',

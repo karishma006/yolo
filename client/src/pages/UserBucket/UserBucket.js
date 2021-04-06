@@ -3,7 +3,6 @@ import axios from 'axios';
 
 import Header from '../../components/Header/Header';
 import UserImage from '../../assets/images/user-0.jpg';
-import AddIcon from '../../assets/icons/add.svg';
 import { API_URL } from '../../utils';
 import { categories } from '../../utils';
 import CategoryBar from '../../components/CategoryBar/CategoryBar';
@@ -152,7 +151,6 @@ class UserBucket extends Component {
                 <section className='bucket-list'>
                     <header className='bucket-list__header'>
                         <p className='bucket-list__heading'>My Bucket</p>
-                        <img className='bucket-list__icon' src={AddIcon} alt='plus-icon'/>
                     </header>
                     <ul className='bucket-list__list'>
                     {userActivities.map(activity => (

@@ -1,9 +1,8 @@
 import './AddReviewForm.scss';
-import Rating from 'react-rating';
 import UserImage from '../../assets/images/user-0.jpg';
 import Button from '../../components/Button/Button';
 import ReactStars from 'react-rating-stars-component';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const categories = {
     'intelligence': '#347DA2',
@@ -34,6 +33,7 @@ const AddReviewForm = ({ category, addReview }) => {
                     <div className='add-review__form__wrapper'>
                         <label className='add-review__form__label'>Rate the activity</label>
                         {category && <ReactStars
+                        classNames='add-review__form__rating'
                         count={5}
                         size={20}
                         char="&hearts;"

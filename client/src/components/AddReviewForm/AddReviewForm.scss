@@ -39,6 +39,12 @@
             margin-bottom: $mob-margin-y-3;
         }
 
+        &__rating {
+            &:focus {
+                outline: none;
+            }
+        }
+
         &__input {
             width: 100%;
             background-color: $primary-color-3;
@@ -47,6 +53,8 @@
             height: 6rem;
             @include rounded-corners;
             margin-bottom: $mob-margin-y-3;
+            padding-left: 1rem;
+            padding-bottom: 3.5rem;
         }
     }
 }
