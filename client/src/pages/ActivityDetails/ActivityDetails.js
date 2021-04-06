@@ -18,7 +18,7 @@ const ActivityDetails = (props) => {
         .then(response => {
             setActivity(response.data);
         });
-    }, []);    
+    }, [activityId]);
 
     const { id, category, title, image, description, knowMore, reviews } = activity;
     const history = useHistory();

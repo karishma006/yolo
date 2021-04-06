@@ -19,7 +19,7 @@ const ActivityReviews = (props) => {
         .then(response => {
             setActivity(response.data);
         });
-    }, []);  
+    }, [activityId]);  
 
     const { id, category, title, image, reviews } = activity;
     const history = useHistory();
