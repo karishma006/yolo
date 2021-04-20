@@ -6,6 +6,13 @@
     padding: 0.875rem $mob-margin-x 1.5rem $mob-margin-x;
     color: $primary-color-1;
 
+    @include tablet {
+        height: 5rem;
+        background-color: $accent-color;
+        @include flex-row;
+        align-items: center;
+    }
+
     &__logo {
         @include flex-column;
         align-items: center;
@@ -16,6 +23,10 @@
     &__nav {
         @include flex-row;
         justify-content: space-between;
+
+        @include tablet {
+            margin-left: auto;
+        }
     }
 
     &__link {
@@ -28,9 +39,20 @@
         padding-bottom: 0.25rem;
         margin-top: 1.625rem;
 
+        @include tablet {
+            width: 29.1666vw;
+            color: $primary-color-2;
+            padding-bottom: 1rem;
+            margin-top: 2.85rem;
+        }
+
         &--active {
             border-bottom: 0.25rem solid $accent-color;
             @include bold;
+
+            @include tablet {
+                border-bottom: 0.25rem solid $primary-color-3;
+            }
         }
     }
 }
