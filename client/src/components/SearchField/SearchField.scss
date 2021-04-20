@@ -3,7 +3,7 @@
 @use '../../partials/variables' as *;
 
 .search {
-    width: 100%;
+    width: calc(100% - 20.8333vw);
     height: 2.25rem;
     border-radius: 1.125rem;
     outline: none;
@@ -18,6 +18,11 @@
     align-items: center;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+
+    @include tablet {
+        margin-top: 2rem;
+        margin: 2rem 10.4166vw 0 10.4166vw;
+    }
 
     &:focus {
         border: 0.0625rem solid $accent-color;
