@@ -18,10 +18,13 @@
     align-items: center;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    @include mob-p2;
 
     @include tablet {
         margin-top: 2rem;
         margin: 2rem 10.4166vw 0 10.4166vw;
+        padding-top: 0.4rem;
+        @include tab-desk-p2;
     }
 
     &:focus {
@@ -33,5 +36,9 @@
         color: $accent-color;
         @include mob-p2;
         @include regular;
+
+        @include tablet {
+            @include tab-desk-p2;
+        }
     }
 }
