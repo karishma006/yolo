@@ -9,6 +9,10 @@
 
     &__heading {
         @include mob-h2;
+
+        @include tablet {
+            @include tab-desk-h3;
+        }
     }
 
     &__form {
@@ -25,6 +29,10 @@
             width: calc(100% - 4rem);
             @include flex-column;
             padding-left: $mob-margin-x;
+
+            @include tablet {
+                padding-left: $tab-margin-x-1/1.5;
+            }
         }
 
         &__wrapper {
@@ -37,6 +45,10 @@
             width: 100%;
             @include mob-p2;
             margin-bottom: $margin-y-3;
+
+            @include tablet {
+                @include tab-desk-p2;
+            }
         }
 
         &__rating {

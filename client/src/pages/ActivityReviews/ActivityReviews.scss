@@ -6,6 +6,10 @@
     padding: 3.5rem $mob-margin-x 0 $mob-margin-x;
     height: auto;
 
+    @include tablet {
+        padding: 3.5rem $tab-margin-x-1 0 $tab-margin-x-1 ;
+    }
+
     &--category-intelligence {
         @include background-category-1;
     }
@@ -30,6 +34,10 @@
         @include flex-row;
         justify-content: flex-start;
         margin-bottom: $margin-y-5;
+
+        @include tablet {
+            margin-bottom: 2.5rem;
+        }
     }
 
     &__back-icon {
@@ -48,6 +56,16 @@
         @include mob-h1;
         margin-right: auto;
         padding-right: 1.5rem;
+
+        @include tablet {
+            @include tab-desk-h2;
+        }
+    }
+
+    &__container {
+        @include tablet {
+            padding: 0 10.41666vw;
+        }
     }
 
     &__card {
@@ -58,9 +76,17 @@
         margin-bottom: auto;
         margin-top: $margin-y-5;
 
+        @include tablet {
+            padding: $margin-y-5 $tab-margin-x-1;
+        }
+
         &__heading {
             margin-top: $margin-y-5;
             @include mob-h2;
+
+            @include tablet {
+                @include tab-desk-h3;
+            }
         }
 
         &__route {
@@ -69,6 +95,10 @@
             @include mob-h2;
             @include bold;
             color: $accent-color;
+
+            @include tablet {
+                @include tab-desk-h3;
+            }
         }
     }
 }

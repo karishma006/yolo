@@ -19,6 +19,10 @@
         &__wrapper {
             margin-left: $mob-margin-x;
             width: calc(100% - 4rem);
+
+            @include tablet {
+                margin-left: $tab-margin-x-1/1.5;
+            }
         }
 
         &__header {
@@ -29,21 +33,37 @@
         &__name {
             @include mob-h3;
             @include bold;
+
+            @include tablet {
+                @include tab-desk-h3;
+            }
         }
 
         &__date {
             @include mob-h3;
+
+            @include tablet {
+                @include tab-desk-h3;
+            }
         }
 
         &__content {
             @include mob-p2;
             margin-top: $margin-y-4;
+
+            @include tablet {
+                @include tab-desk-p2;
+            }
         }
 
         &__thumbs {
             @include mob-p2;
             @include semi-bold;
             margin: $margin-y-4 0;
+
+            @include tablet {
+                @include tab-desk-p2;
+            }
         }
 
         &__footer {
@@ -55,6 +75,10 @@
             @include semi-bold;
             margin-left: auto;
             color: $accent-color;
+
+            @include tablet {
+                @include tab-desk-h3;
+            }
         }
     }
 }

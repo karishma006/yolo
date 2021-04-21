@@ -58,7 +58,7 @@ const ActivityDetails = (props) => {
                     text='+ Add to my bucket'
                     onClick={addToBucket}/>}
                 </article>
-                </div>
+            </div>
             <div className='activity__wrapper'>
                 <p className='activity__text'>See what people are saying</p>
                 <Link key={id} to={`/activities/${id}/reviews`}>

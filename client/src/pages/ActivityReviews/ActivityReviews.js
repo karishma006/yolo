@@ -65,24 +65,26 @@ const ActivityReviews = (props) => {
                 </button>
                 <h3 className='reviews__title'>{title}</h3>
             </div>
-            <article className='reviews__card'>
-            {addedToBucket ? 
-                <Link to='/mybucket' className='reviews__card__route'>View in Bucket</Link> : 
-                <Button
-                className='reviews__card__button'
-                text='+ Add to my bucket'
-                onClick={addToBucket}/>}
-                <AddReviewForm
-                category={category}
-                addReview={addReview}/>
-                <h3 className='reviews__card__heading'>Reviews</h3>
-                {reviews && reviews.map(review => 
-                    <ReviewCard
-                    key={review.id}
-                    review={review}
-                    category={category}/>
-                )}
-            </article>
+            <div className='reviews__container'>
+                <article className='reviews__card'>
+                {addedToBucket ? 
+                    <Link to='/mybucket' className='reviews__card__route'>View in Bucket</Link> : 
+                    <Button
+                    className='reviews__card__button'
+                    text='+ Add to my bucket'
+                    onClick={addToBucket}/>}
+                    <AddReviewForm
+                    category={category}
+                    addReview={addReview}/>
+                    <h3 className='reviews__card__heading'>Reviews</h3>
+                    {reviews && reviews.map(review => 
+                        <ReviewCard
+                        key={review.id}
+                        review={review}
+                        category={category}/>
+                    )}
+                </article>
+            </div>
         </main>
     );
 };
