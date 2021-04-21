@@ -3,6 +3,14 @@
 @use '../../partials/variables' as *;
 
 .activity-nav {
+
+    &__layout {
+        @include tablet {
+            @include flex-row;
+            flex-wrap: wrap;
+        }
+    }
+
     &__link {
         text-decoration: none;
         color: $primary-color-1;

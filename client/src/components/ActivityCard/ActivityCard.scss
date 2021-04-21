@@ -12,13 +12,18 @@
 
         &__right {
             @include flex-column;
-            padding: $mob-margin-y-4 0 $mob-margin-y-3 $mob-margin-x;
+            padding: $margin-y-4 0 $margin-y-3 $mob-margin-x;
             @include mob-h3;
+
+            @include tablet {
+                @include tab-desk-h3;
+                padding: 1rem 0 1rem 2.0833vw;
+            }
         }
 
         &__title {
             @include bold;
-            margin-bottom: $mob-margin-y-3;
+            margin-bottom: $margin-y-3;
         }
 
         &__line {
@@ -28,7 +33,7 @@
 
         &__wrapper {
             @include flex-row;
-            margin-top: $mob-margin-y-3;
+            margin-top: $margin-y-3;
         }
 
         &__stats {
@@ -36,7 +41,7 @@
 
             &--text {
                 @include regular;
-                padding-left: $mob-margin-x/4;
+                padding-left: $margin-y-2;
             }
         }
 

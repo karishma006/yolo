@@ -8,7 +8,7 @@
 .add-review__form__button {
     width: 100%;
     background-color: $accent-color;
-    padding: $mob-margin-y-3 $mob-margin-y-4;
+    padding: $margin-y-3 $margin-y-4;
     color: $primary-color-2;
     @include mob-p2;
     @include bold;

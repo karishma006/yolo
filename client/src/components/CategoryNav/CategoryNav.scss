@@ -6,11 +6,11 @@
     &__list {
         @include flex-row;
         padding: 0;
-        margin: $mob-margin-y-5 0;
+        margin: $margin-y-5 0;
         justify-content: space-between;
 
         @include tablet {
-            margin: $mob-margin-y-6 6.51041vw;
+            margin: $margin-y-6 8.07291vw 1.25rem 8.07291vw;
         }
     }
     

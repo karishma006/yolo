@@ -4,7 +4,10 @@
 
 .main {
     padding: 0 $mob-margin-x;
-    padding: 0 $tab-margin-x-1;
+
+    @include tablet {
+        padding: $margin-y-6 $tab-margin-x-1/2;
+    }
 }
 
 .categories {

@@ -49,7 +49,7 @@
         @include flex-column;
         align-items: center;
         justify-content: center;
-        padding: 2.25rem $mob-margin-y-5;
+        padding: 2.25rem $margin-y-5;
         color: $primary-color-1;
         margin-bottom: auto;
 
@@ -61,7 +61,7 @@
         &__description {
             @include mob-p2;
             @include regular;
-            margin-top: $mob-margin-y-5;
+            margin-top: $margin-y-5;
         }
 
         &__link {
@@ -87,7 +87,7 @@
 
     &__text {
         color: $primary-color-2;
-        margin-bottom: $mob-margin-y-4;
+        margin-bottom: $margin-y-4;
     }
 
     &__down-icon {

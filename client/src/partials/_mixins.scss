@@ -145,9 +145,16 @@
 @mixin activityCard {
     width: 100%;
     height: 8.875rem;
-    margin-bottom: $mob-margin-y-4;
+    margin-bottom: $margin-y-4;
     @include rounded-corners;
     @include flex-row;
+
+    @include tablet {
+        width: 29.1666vw;
+        height: auto;
+        @include flex-column;
+        margin: $tab-margin-x-1/2;
+    }
 }
 
 @mixin activityImage {
@@ -155,4 +162,10 @@
     width: 8.625rem;
     height: 8.625rem;
     object-fit: cover;
+    z-index: -1;
+
+    @include tablet {
+        width: 28.85vw;
+        height: 28.6vw;
+    }
 }

@@ -3,8 +3,8 @@
 @use '../../partials/variables' as *;
 
 .add-review {
-    margin-top: $mob-margin-y-5;
-    padding-bottom: $mob-margin-y-5;
+    margin-top: $margin-y-5;
+    padding-bottom: $margin-y-5;
     border-bottom: 0.0625rem solid $primary-color-4;
 
     &__heading {
@@ -13,7 +13,7 @@
 
     &__form {
         @include flex-row;
-        margin-top: $mob-margin-y-5;
+        margin-top: $margin-y-5;
 
         &__image {
             width: 4rem;
@@ -30,13 +30,13 @@
         &__wrapper {
             @include flex-column;
             width: 100%;
-            margin-bottom: $mob-margin-y-4;
+            margin-bottom: $margin-y-4;
         }
 
         &__label {
             width: 100%;
             @include mob-p2;
-            margin-bottom: $mob-margin-y-3;
+            margin-bottom: $margin-y-3;
         }
 
         &__rating {
@@ -52,7 +52,7 @@
             border: 0;
             height: 6rem;
             @include rounded-corners;
-            margin-bottom: $mob-margin-y-3;
+            margin-bottom: $margin-y-3;
             padding-left: 1rem;
             padding-bottom: 3.5rem;
         }

@@ -4,7 +4,7 @@
 
 .review {
     &__card {
-        padding: $mob-margin-y-4 0;
+        padding: $margin-y-4 0;
         @include flex-row;
         justify-content: flex-start;
         border-bottom: 0.0625rem solid $primary-color-4;
@@ -37,13 +37,13 @@
 
         &__content {
             @include mob-p2;
-            margin-top: $mob-margin-y-4;
+            margin-top: $margin-y-4;
         }
 
         &__thumbs {
             @include mob-p2;
             @include semi-bold;
-            margin: $mob-margin-y-4 0;
+            margin: $margin-y-4 0;
         }
 
         &__footer {

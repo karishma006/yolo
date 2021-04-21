@@ -201,7 +201,7 @@
     },
     {
         "id": "6",
-        "title": "Witness a meteor shower",
+        "title": "Watch a meteor shower",
         "image": "http://localhost:8080/public/activity-6.jpg",
         "category": "fun",
         "rating": 4.5,
@@ -241,7 +241,7 @@
     },
     {
         "id": "7",
-        "title": "Play a musical instrument",
+        "title": "Play an instrument",
         "image": "http://localhost:8080/public/activity-7.jpg",
         "category": "creativity",
         "rating": 4,
@@ -361,7 +361,7 @@
     },
     {
         "id": "10",
-        "title": "Win a puzzle tournament",
+        "title": "Win a puzzle contest",
         "image": "http://localhost:8080/public/activity-10.jpg",
         "category": "intelligence",
         "rating": 3,
@@ -521,7 +521,7 @@
     },
     {
         "id": "14",
-        "title": "Take up a new watersport",
+        "title": "Take up a watersport",
         "image": "http://localhost:8080/public/activity-14.jpg",
         "category": "fitness",
         "rating": 4,

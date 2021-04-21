@@ -3,7 +3,7 @@
 @use '../../partials/variables' as *;
 
 .search {
-    width: calc(100% - 20.8333vw);
+    width: 100%;
     height: 2.25rem;
     border-radius: 1.125rem;
     outline: none;
@@ -21,8 +21,8 @@
     @include mob-p2;
 
     @include tablet {
-        margin-top: 2rem;
-        margin: 2rem 10.4166vw 0 10.4166vw;
+        width: calc(100% - 23.95832vw);
+        margin: 0 11.97916vw;
         padding-top: 0.4rem;
         @include tab-desk-p2;
     }

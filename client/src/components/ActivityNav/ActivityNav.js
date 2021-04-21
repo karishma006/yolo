@@ -5,7 +5,7 @@ import './ActivityNav.scss';
 const ActivityNav = ({ activities }) => {
     return (
         <section className='activity-nav'>
-            <nav>
+            <nav className='activity-nav__layout'>
                 {activities.map(activity => (
                     <Link 
                     key={activity.id} 

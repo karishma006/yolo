@@ -29,7 +29,7 @@
     &__header {
         @include flex-row;
         justify-content: flex-start;
-        margin-bottom: $mob-margin-y-5;
+        margin-bottom: $margin-y-5;
     }
 
     &__back-icon {
@@ -52,14 +52,14 @@
 
     &__card {
         width: 100%;
-        padding: $mob-margin-y-5 $mob-margin-x;
+        padding: $margin-y-5 $mob-margin-x;
         border-radius: 0.5rem 0.5rem 0 0;
         background-color: $primary-color-2;
         margin-bottom: auto;
-        margin-top: $mob-margin-y-5;
+        margin-top: $margin-y-5;
 
         &__heading {
-            margin-top: $mob-margin-y-5;
+            margin-top: $margin-y-5;
             @include mob-h2;
         }
 

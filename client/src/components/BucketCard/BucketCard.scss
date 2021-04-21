@@ -41,7 +41,7 @@
             justify-content: space-between;
             align-items: center;
             width: calc(100% - 8.625rem);
-            padding: $mob-margin-y-4 $mob-margin-x $mob-margin-y-4 $mob-margin-x;
+            padding: $margin-y-4 $mob-margin-x $margin-y-4 $mob-margin-x;
         }
 
         &__link {
@@ -63,7 +63,7 @@
             @include mob-h2;
             @include bold;
             color: $primary-color-1;
-            margin-bottom: $mob-margin-y-3;
+            margin-bottom: $margin-y-3;
 
             &--done {
                 color: $primary-color-2;
@@ -72,11 +72,11 @@
 
         &__button {
             width: 100%;
-            padding: $mob-margin-y-2 $mob-margin-x;
+            padding: $margin-y-2 $mob-margin-x;
             border-radius: 1.125rem;
             @include mob-p2;
             background-color: $primary-color-2;
-            margin-bottom: $mob-margin-y-4;
+            margin-bottom: $margin-y-4;
 
             &--category-intelligence {
                 @include border-category-1;
@@ -114,7 +114,7 @@
             color: $primary-color-1;
             @include mob-h3;
             @include semi-bold;
-            padding-bottom: $mob-margin-y-3;
+            padding-bottom: $margin-y-3;
             color: $primary-color-2;
         }
 
