@@ -16,6 +16,10 @@
     border: 0;
     border-radius: 1.125rem;
 
+    @include tablet {
+        @include tab-desk-p2;
+    }
+
     &:hover {
         background-color: $hover-color;
     }

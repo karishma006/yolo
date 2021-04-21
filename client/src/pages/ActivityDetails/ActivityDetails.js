@@ -46,23 +46,26 @@ const ActivityDetails = (props) => {
             <button href='#' onClick={() => history.goBack()} className='activity__back-icon'>
                 <img src={BackIcon} alt='Back Icon'/>
             </button>
-            <article className='activity__card'>
-                <h3 className='activity__card__title'>{title}</h3>
-                <p className='activity__card__description'>{description}</p>
-                <a href={knowMore} target='_blank' rel='noreferrer' className='activity__card__link'>Know more</a>
-                {addedToBucket ? 
-                <Link to='/mybucket' className='activity__card__route'>View in Bucket</Link> : 
-                <Button
-                className='activity__card__button'
-                text='+ Add to my bucket'
-                onClick={addToBucket}/>}
-            </article>
+            <div className='activity__container'>
+                <article className='activity__card'>
+                    <h3 className='activity__card__title'>{title}</h3>
+                    <p className='activity__card__description'>{description}</p>
+                    <a href={knowMore} target='_blank' rel='noreferrer' className='activity__card__link'>Know more</a>
+                    {addedToBucket ? 
+                    <Link to='/mybucket' className='activity__card__route'>View in Bucket</Link> : 
+                    <Button
+                    className='activity__card__button'
+                    text='+ Add to my bucket'
+                    onClick={addToBucket}/>}
+                </article>
+                </div>
             <div className='activity__wrapper'>
                 <p className='activity__text'>See what people are saying</p>
                 <Link key={id} to={`/activities/${id}/reviews`}>
                     <img className='activity__down-icon' src={DownIcon} alt='Back Icon'/>
                 </Link>
             </div>
+            
         </main>
     );
 };

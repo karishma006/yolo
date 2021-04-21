@@ -6,8 +6,12 @@
     padding: 3.5rem $mob-margin-x;
     height: 100vh;
     @include flex-column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+
+    @include tablet {
+        padding: 3.5rem $tab-margin-x-1;
+    }
 
     &--category-intelligence {
         @include background-category-1;
@@ -31,7 +35,6 @@
 
     &__back-icon {
         align-self: flex-start;
-        margin-bottom: auto;
         border: none;
         background: none;
         cursor: pointer;
@@ -41,9 +44,15 @@
         }
     }
 
+    &__container {
+        @include tablet {
+            padding: 0 10.41666vw;
+        }
+    }
+
     &__card {
         width: 100%;
-        height: calc(100vw - 8.5332vw);
+        height: auto;
         @include rounded-corners;
         background-color: $primary-color-2;
         @include flex-column;
@@ -53,15 +62,28 @@
         color: $primary-color-1;
         margin-bottom: auto;
 
+        @include tablet {
+            height: calc(100vw - 27.0832vw);
+            padding: 0 $tab-margin-x-2;
+        }
+
         &__title {
             @include mob-h1;
             @include bold;
+
+            @include tablet {
+                @include tab-desk-h2;
+            }
         }
 
         &__description {
             @include mob-p2;
             @include regular;
             margin-top: $margin-y-5;
+
+            @include tablet {
+                @include tab-desk-p2;
+            }
         }
 
         &__link {
@@ -71,12 +93,20 @@
             @include bold;
             margin-top: 2.1875rem;
             margin-bottom: 2rem;
+
+            @include tablet {
+                @include tab-desk-p2;
+            }
         }
 
         &__route {
             @include mob-h2;
             color: $accent-color;
             @include bold;
+
+            @include tablet {
+                @include tab-desk-h2;
+            }
         }
     }
 
@@ -88,6 +118,11 @@
     &__text {
         color: $primary-color-2;
         margin-bottom: $margin-y-4;
+        @include mob-h3;
+
+        @include tablet {
+            @include tab-desk-h3;
+        }
     }
 
     &__down-icon {
