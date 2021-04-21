@@ -3,6 +3,13 @@
 @use '../../partials/variables' as *;
 
 .bucket-list {
+    &__list {
+        @include tablet {
+            @include flex-row;
+            flex-wrap: wrap;
+        }
+    }
+
     &__card {
         @include activityCard;
 
@@ -38,10 +45,15 @@
 
         &__right {
             @include flex-column;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             width: calc(100% - 8.625rem);
             padding: $margin-y-4 $mob-margin-x $margin-y-4 $mob-margin-x;
+
+            @include tablet {
+                width: 100%;
+                padding: $margin-y-4 1rem $margin-y-4 1rem;
+            }
         }
 
         &__link {
@@ -65,7 +77,13 @@
             color: $primary-color-1;
             margin-bottom: $margin-y-3;
 
+            @include tablet {
+                @include tab-desk-h3;
+            }
+
             &--done {
+                @include tab-desk-h3;
+                @include semi-bold;
                 color: $primary-color-2;
             }
         }
@@ -104,9 +122,9 @@
             }
 
             &:hover {
-                background-color: $primary-color-5;
-                border: 0.125rem solid $primary-color-5;
-                color: $primary-color-1;
+                background-color: $accent-color;
+                border: 0.125rem solid $accent-color;
+                color: $primary-color-2;
             }
         }
 
@@ -116,6 +134,11 @@
             @include semi-bold;
             padding-bottom: $margin-y-3;
             color: $primary-color-2;
+
+            @include tablet {
+                @include tab-desk-h3;
+                padding: $margin-y-4 0;
+            }
         }
 
         &__review {
@@ -124,26 +147,30 @@
             @include mob-p2;
             text-decoration: underline;
             color: $primary-color-2;
+
+            @include tablet {
+                @include tab-desk-p2;
+            }
         }
 
         &__done-intelligence {
-            @include background-category-1; 
+            @include background-category-1;
         }
 
         &__done-creativity {
-            @include background-category-2; 
+            @include background-category-2;
         }
 
         &__done-fun {
-            @include background-category-3; 
+            @include background-category-3;
         }
 
         &__done-adventure {
-            @include background-category-4; 
+            @include background-category-4;
         }
 
         &__done-fitness {
-            @include background-category-5; 
+            @include background-category-5;
         }
     }
 }

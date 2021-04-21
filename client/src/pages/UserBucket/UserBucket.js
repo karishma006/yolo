@@ -126,36 +126,38 @@ class UserBucket extends Component {
             <>
             <Header/>
             <main className='profile'>
-                <img src={UserImage} alt='Jen Smith' className='profile__image'/>
-                <Button
-                className='bucket-list__button'
-                text='CHALLENGE ME!'
-                onClick={this.handleChallenge}/>
-                <p className='bucket-list__heading'>My Progress</p>
-                <ul className='bucket-list__categories'>
-                    {categories.map((category, i) => (
-                        <li key={i} className='bucket-list__category-bar'>
-                            <CategoryBar
-                            category={category}
-                            percentage={this.state.progress[category]['percentage']}/>
-                        </li>
-                    ))}
-                </ul>
+                <div className='profile__top'>
+                    <img src={UserImage} alt='Jen Smith' className='profile__image'/>
+                    <Button
+                    className='bucket-list__button'
+                    text='CHALLENGE ME!'
+                    onClick={this.handleChallenge}/>
+                </div>
                 <section className='bucket-list'>
+                    <p className='bucket-list__heading'>My Progress</p>
+                    <ul className='bucket-list__categories'>
+                        {categories.map((category, i) => (
+                            <li key={i} className='bucket-list__category-bar'>
+                                <CategoryBar
+                                category={category}
+                                percentage={this.state.progress[category]['percentage']}/>
+                            </li>
+                        ))}
+                    </ul>
                     <p className='bucket-list__heading'>My Bucket</p>
-                    <ul className='bucket-list__list'>
-                    {userActivities.map(activity => (
-                        <li 
-                        key={activity.id} 
-                        className='bucket-list__item'>
-                            <BucketCard
-                            activity={activity}
-                            handleDelete={this.handleDelete}
-                            handleDone={this.handleDone}/>
-                        </li>
-                    ))}
-                </ul>
                 </section>
+                <ul className='bucket-list__list'>
+                {userActivities.map(activity => (
+                    <li 
+                    key={activity.id} 
+                    className='bucket-list__item'>
+                        <BucketCard
+                        activity={activity}
+                        handleDelete={this.handleDelete}
+                        handleDone={this.handleDone}/>
+                    </li>
+                ))}
+                </ul>
             </main>
             </>
         );

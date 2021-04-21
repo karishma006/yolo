@@ -87,6 +87,7 @@
 
 @mixin flex-row {
     display: flex;
+    flex-direction: row;
 }
 
 @mixin flex-column {
@@ -148,10 +149,13 @@
     margin-bottom: $margin-y-4;
     @include rounded-corners;
     @include flex-row;
+    z-index: 10;
 
     @include tablet {
         width: 29.1666vw;
-        height: auto;
+        height: 48.82812vw;
+        // width: 14rem;
+        // height: 23.4375rem;
         @include flex-column;
         margin: $tab-margin-x-1/2;
     }
@@ -161,11 +165,12 @@
     border-radius: 0.35rem;
     width: 8.625rem;
     height: 8.625rem;
+    
     object-fit: cover;
-    z-index: -1;
-
     @include tablet {
-        width: 28.85vw;
-        height: 28.6vw;
+        width: 28.7vw;
+        height: 28.7vw;
+        // width: 13.75rem;
+        // height: 13.75rem;
     }
 }
