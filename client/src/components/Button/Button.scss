@@ -20,6 +20,10 @@
         @include tab-desk-p2;
     }
 
+    @include desktop {
+        width: 41.25vw;
+    }
+
     &:hover {
         background-color: $hover-color;
     }

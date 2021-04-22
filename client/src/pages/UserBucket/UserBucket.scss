@@ -9,6 +9,11 @@
         padding: $margin-y-6 $tab-margin-x-1/2;
     }
 
+    @include desktop {
+        width: 100%;
+        padding: $margin-y-6 6.875vw;
+    }
+
     &__top {
         @include flex-column;
         align-items: center;
@@ -30,6 +35,10 @@
     @include tablet {
         width: 100%;
         padding: 0 $tab-margin-x-1/2;
+    }
+
+    @include desktop {
+        padding: 0 0.9375vw;
     }
 
     &__categories {

@@ -8,6 +8,10 @@
     @include tablet {
         padding: $margin-y-6 $tab-margin-x-1/2;
     }
+
+    @include desktop {
+        padding: $margin-y-6 6.875vw;
+    }
 }
 
 .categories {

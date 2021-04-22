@@ -12,16 +12,23 @@
         @include tablet {
             margin: $margin-y-6 8.07291vw 1.25rem 8.07291vw;
         }
+
+        @include desktop {
+            margin: $margin-y-6 20.46875vw 1.25rem 20.46875vw;
+        }
     }
-    
+
     &__item {
         list-style-type: none;
-        margin-left: $mob-margin-x/4;
-        margin-right: $mob-margin-x/4;
+        margin: 0 $mob-margin-x/4;
 
         @include tablet {
-            margin-left: 1.25 * $tab-margin-x-1;
-            margin-right: 1.25 * $tab-margin-x-1;
+            margin: 0 $tab-margin-x-1*1.25;
+        }
+
+        @include desktop {
+            margin-left: 2.03125vw;
+            margin-right: 2.03125vw;
         }
     }
 }

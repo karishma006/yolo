@@ -154,10 +154,14 @@
     @include tablet {
         width: 29.1666vw;
         height: 48.82812vw;
-        // width: 14rem;
-        // height: 23.4375rem;
         @include flex-column;
         margin: $tab-margin-x-1/2;
+
+        @include desktop {
+            width: 19.6875vw;
+            height: 31.25vw;
+            margin: 0.9375vw;
+        }
     }
 }
 
@@ -165,12 +169,15 @@
     border-radius: 0.35rem;
     width: 8.625rem;
     height: 8.625rem;
-    
     object-fit: cover;
+
     @include tablet {
         width: 28.7vw;
         height: 28.7vw;
-        // width: 13.75rem;
-        // height: 13.75rem;
+    }
+
+    @include desktop {
+        width: 19.4vw;
+        height: 19.4vw;
     }
 }

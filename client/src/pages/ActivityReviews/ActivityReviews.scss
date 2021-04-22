@@ -10,6 +10,10 @@
         padding: 3.5rem $tab-margin-x-1 0 $tab-margin-x-1 ;
     }
 
+    @include desktop {
+        padding: 3.5rem $desk-margin-x/4.16666 0 $desk-margin-x/4.16666;
+    }
+
     &--category-intelligence {
         @include background-category-1;
     }
@@ -75,9 +79,15 @@
         background-color: $primary-color-2;
         margin-bottom: auto;
         margin-top: $margin-y-5;
+        @include flex-column;
+        align-items: center;
 
         @include tablet {
             padding: $margin-y-5 $tab-margin-x-1;
+        }
+
+        @include desktop {
+            padding: $margin-y-5 $desk-margin-x;
         }
 
         &__heading {

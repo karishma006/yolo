@@ -9,12 +9,15 @@
     margin-bottom: 1.5rem;
 
     @include tablet {
+        padding: 0.875rem $tab-margin-x-1 1.5rem $tab-margin-x-1;
         height: 5rem;
-        background-color: $primary-color-3;
         @include flex-row;
         align-items: center;
-        padding-bottom: 1.5rem;
         margin-bottom: 0;
+    }
+
+    @include desktop {
+        padding: 0.875rem $desk-margin-x 1.5rem $desk-margin-x;
     }
 
     &__logo {
@@ -44,11 +47,16 @@
         margin-top: 1.625rem;
 
         @include tablet {
-            width: 29.1666vw;
-            color: $primary-color-1;
+            width: 13.02083vw;
             padding-bottom: 1rem;
             margin-top: 2.85rem;
             @include tab-desk-h3;
+            margin-left: $tab-margin-x-1;
+        }
+
+        @include desktop {
+            width: 19.6875vw;
+            margin-left: 1.875vw;
         }
 
         &--active {

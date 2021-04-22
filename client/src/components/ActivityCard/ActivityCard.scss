@@ -17,7 +17,11 @@
 
             @include tablet {
                 @include tab-desk-h3;
-                padding: 1rem 0 1rem 1rem;
+                padding: $tab-margin-x-1 0 $tab-margin-x-1 1rem;
+            }
+
+            @include desktop {
+                padding: $desk-margin-x/6.25 0 $desk-margin-x/6.25 1rem;
             }
         }
 

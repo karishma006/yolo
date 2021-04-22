@@ -27,6 +27,11 @@
         @include tab-desk-p2;
     }
 
+    @include desktop {
+        width: 41.25vw;
+        margin: 0 22.5vw;
+    }
+
     &:focus {
         border: 0.0625rem solid $accent-color;
         color: $primary-color-1;
